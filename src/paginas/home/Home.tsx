@@ -5,7 +5,7 @@ function Home() {
 
     return (
         <h1>
-            A
+            PAGINA HOME
         </h1>
         
     );
