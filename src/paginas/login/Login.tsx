@@ -6,6 +6,7 @@ import useLocalStorage from 'react-use-localstorage';
 import UserLogin from '../../models/UserLogin';
 import { login } from '../../service/Service';
 import console from '../../assets/console.png';
+import './Login.css'
 
 function Login () {
     const [email, setEmail] = useState("")
@@ -55,16 +56,16 @@ async function logar(e: ChangeEvent<HTMLFormElement>){
 }
 
     return (
-        <div className='container'>
-            <div className='container-login'>
-                <div className='wrap-login'>
+        <Grid className='container'>
+            <Box className='container-login'>
+                <Box className='wrap-login'>
                     <form onSubmit={ logar }>
                         <span className='login-form-title'>Bem Vindo!</span>
                         <span className='login-form-title'>
                             <img src={console} alt='NSG' />
                         </span>
 
-                        <div className='wrap-input'>
+                        <Box className='wrap-input'>
                             <input 
                             className={email !== "" ? 'has-val input' : 'input'} 
                             type="email" 
@@ -73,9 +74,9 @@ async function logar(e: ChangeEvent<HTMLFormElement>){
                             onChange={ (e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
                             />
                             <span className='focus-input' data-placeholder='Email'></span>
-                        </div>
+                        </Box>
 
-                        <div className='wrap-input'>
+                        <Box className='wrap-input'>
                             <input 
                             className={password !== "" ? 'has-val input' : 'input'} 
                             type="password" 
@@ -84,25 +85,25 @@ async function logar(e: ChangeEvent<HTMLFormElement>){
                             onChange={ (e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
                             />
                             <span className='focus-input' data-placeholder='Password'></span>
-                        </div>
+                        </Box>
 
-                        <div className="container-login-form-btn">
+                        <Box className="container-login-form-btn">
                             <button className="login-form-btn" >Login</button>
-                        </div>
+                        </Box>
 
-                        <div className="text-center">
+                        <Box className="text-center">
                             <span className="txt1">Nao possui conta?</span>
 
                             <Link to='/cadastro'>
                                 <Typography variant='subtitle1' gutterBottom align='center' className='textos1'>Cadastre-se</Typography>
                             </Link>
-                        </div>
+                        </Box>
 
                     </form>
-                </div>
-            </div>
+                </Box>
+            </Box>
 
-        </div>
+        </Grid>
     );
 }
 

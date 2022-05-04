@@ -1,9 +1,33 @@
-.footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: black;
-    color: white;
-    text-align: center;
- }
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    height: 100vh;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.botao {
+    background: -webkit-linear-gradient(to left, #21d4fd, #b721ff);
+    background: -o-linear-gradient(to left, #21d4fd, #b721ff);
+    background: -moz-linear-gradient(to left, #21d4fd, #b721ff);
+    background: linear-gradient(to left, #21d4fd, #b721ff);
+}
+
+.box1 {
+    background-color: #000000 !important;
+    height: 120px; 
+}
+
+.box2 {
+    background-color: #000000 !important;
+    height: 60px; 
+}
+
+.text-decorator-none {
+    text-decoration: none !important;
+}

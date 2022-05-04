@@ -1,18 +1,22 @@
 import React from 'react';
 import { Box, Button, Grid, TextField, Typography } from '@material-ui/core'
 import { Link, useNavigate } from 'react-router-dom';
+import Navbar from '../../components/estaticos/navbar/Navbar';
 import './SobreNos.css';
 
 function SobreNos() {
     return (
+        <>
+        <Navbar />
+
         <Grid className="container">
-            <Box className="box">
+            <Box className="box11">
                 <h1>Sobre a NSG</h1>
             </Box>
-            <Box className="box">
+            <Box className="box22">
                 <h2>Integrantes</h2>
             </Box>
-            <Box className="box">
+            <Box className="box33">
                 <form>
                     <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' className='textos2'>Entre em contato conosco:</Typography>
                     
@@ -29,6 +33,8 @@ function SobreNos() {
                 </form>
             </Box>
         </Grid>
+
+        </>
     );
 }
 

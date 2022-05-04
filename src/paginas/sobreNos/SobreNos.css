@@ -2,13 +2,35 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: center !important;
 }
 
-.box {
+.box11 {
     height: 100vh;
+    width: 95%;
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #9ae9e9;
+}
+
+.box22 {
+    height: 100vh;
+    width: 95%;
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: rgb(102, 100, 107);
+}
+
+.box33 {
+    height: 100vh;
+    width: 95%;
+    text-align: center;
     margin-top: 20px;
     margin-bottom: 20px;
+    padding: 20px;
+    background-color: grey;
 }
 
 .botao {
@@ -16,4 +38,8 @@
     background: -o-linear-gradient(to left, #21d4fd, #b721ff);
     background: -moz-linear-gradient(to left, #21d4fd, #b721ff);
     background: linear-gradient(to left, #21d4fd, #b721ff);
+}
+
+.text-decorator-none {
+    text-decoration: none !important;
 }

@@ -74,6 +74,11 @@ body, html {
   font-family: Nunito, sans-serif;
 }
 
+.has-val {
+  background-color: transparent;
+  color: transparent;
+}
+
 .focus-input {
   position: absolute;
   display: block;
@@ -109,6 +114,7 @@ body, html {
   font-family: Nunito, sans-serif;
   font-size: 15px;
   color: #999999;
+  border: 0 none;
   line-height: 1.2;
   content: attr(data-placeholder);
   display: block;
@@ -137,6 +143,7 @@ body, html {
 
 .has-val+.focus-input::after {
   top: -15px;
+
 }
 
 .has-val+.focus-input::before {

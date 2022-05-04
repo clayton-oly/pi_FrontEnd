@@ -1,6 +1,5 @@
 import React from 'react';
 import './Home.css';
-import Footer from '../../components/estaticos/footer/Footer'
 import Navbar from '../../components/estaticos/navbar/Navbar'
 
 function Home() {
@@ -10,7 +9,6 @@ function Home() {
         <h1>
             PAGINA HOME
         </h1>
-        <Footer />
     </>    
     );
 }
