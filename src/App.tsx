@@ -2,22 +2,26 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './paginas/home/Home';
 import Login from './paginas/login/Login';
-
+import CadastroUsuario from './paginas/cadastroUsuario/CadastroUsuario';
 import './App.css';
+import Footer from './components/estaticos/footer/Footer';
 
 function App() {
   return (
 
     <Router>
+      <div style={{minHeight: '100vh'}}>
+        <Routes>
+          <Route path="/" element={<Home />}/>
 
-      <Routes>
-        <Route path="/" element={<Home />}/>
+          <Route path="/home" element={<Home />}/>
 
-        <Route path="/home" element={<Home />}/>
+          <Route path="/login" element={<Login />} />
 
-        <Route path="/login" element={<Login />} />
-      </Routes>
-      
+          <Route path='/cadastro' element={<CadastroUsuario/>}/>
+        </Routes>
+      </div>
+      <Footer/>
     </Router>
   );
 }
