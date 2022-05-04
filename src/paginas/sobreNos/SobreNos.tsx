@@ -11,13 +11,13 @@ function SobreNos() {
 
         <Grid className="container">
             <Box className="box11">
-                <h1>Sobre a NSG</h1>
+            <Typography variant='h1' gutterBottom color='textPrimary' component='h1' align='center' className='texto'>Sobre a NSG</Typography>
             </Box>
             <Box className="box22">
-                <h2>Integrantes</h2>
+            <Typography variant='h2' gutterBottom color='textPrimary' component='h2' align='center' className='texto'>Integrantes</Typography>
             </Box>
             <Box className="box33">
-                <form>
+                <form className='form'>
                     <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' className='textos2'>Entre em contato conosco:</Typography>
                     
                     <TextField id='nome' label='nome' variant='outlined' name='nome' margin='normal' fullWidth placeholder='Insira seu nome' required />
