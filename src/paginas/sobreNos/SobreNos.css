@@ -1,0 +1,19 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    height: 100vh;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.botao {
+    background: -webkit-linear-gradient(to left, #21d4fd, #b721ff);
+    background: -o-linear-gradient(to left, #21d4fd, #b721ff);
+    background: -moz-linear-gradient(to left, #21d4fd, #b721ff);
+    background: linear-gradient(to left, #21d4fd, #b721ff);
+}
