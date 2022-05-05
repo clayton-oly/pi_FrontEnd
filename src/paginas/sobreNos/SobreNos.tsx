@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Button, Grid, TextField, Typography } from '@material-ui/core'
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Navbar from '../../components/estaticos/navbar/Navbar';
 import './SobreNos.css';
 

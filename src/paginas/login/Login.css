@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Knewave&family=Nunito:wght@400;600;700&display=swap');
-
 * {
   margin: 0;
   padding: 0;
@@ -7,197 +6,187 @@
 }
 
 body, html {
-  font-family: Nunito, sans-serif;
-  
+  font-family: Nunito, sans-serif !important;
 }
 
 .container {
-  width: 100%;
-  margin: 0 auto;
- 
+  width: 100% !important;
+  margin: 0 auto !important;
 }
 
 .container-login {
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  padding: 15px;
-  background-color: #111;
+  width: 100% !important;
+  min-height: 100vh !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 15px !important;
+  background-color: #111 !important;
 }
 
 .wrap-login {
-  width: 390px;
-  background-color: #333;
-  border-radius: 10px;
-  overflow: hidden;
-  padding: 77px 55px 33px 55px;
-  box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.2);
+  width: 390px !important;
+  background-color: #333 !important;
+  border-radius: 10px !important;
+  overflow: hidden !important;
+  padding: 77px 55px 33px 55px !important;
+  box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.2) !important;
 }
 
 .login-form {
-  width: 100%;
+  width: 100% !important;
 }
 
 .login-form-title {
-  font-family: Nunito, sans-serif;
-  display: block;
-  font-size: 30px;
-  color: azure;
-  line-height: 1.2;
-  text-align: center;
+  font-family: Nunito, sans-serif !important;
+  display: block !important;
+  font-size: 30px !important;
+  color: azure !important;
+  line-height: 1.2 !important;
+  text-align: center !important;
 }
 
 .login-form-title img {
-  width: 90px;
+  width: 90px !important;
 }
 
 .wrap-input {
-  width: 100%;
-  position: relative;
-  border-bottom: 2px solid #adadad;
-  margin-bottom: 37px;
+  width: 100% !important;
+  position: relative !important;
+  border-bottom: 2px solid #adadad !important;
+  margin-bottom: 37px !important;
 }
 
 .input {
-  font-size: 15px;
-  color: #fff;
-  line-height: 1.2;
-  border: none;
-  display: block;
-  width: 100%;
-  height: 45px;
-  background-color: transparent;
-  padding: 0 5px;
-  font-family: Nunito, sans-serif;
-}
-
-.has-val {
-  background-color: transparent;
-  color: transparent;
+  font-size: 15px !important;
+  color: #fff !important;
+  line-height: 1.2 !important;
+  border: none !important;
+  display: block !important;
+  width: 100% !important;
+  height: 45px !important;
+  background-color: transparent !important;
+  padding: 0 5px !important;
+  font-family: Nunito, sans-serif !important;
 }
 
 .focus-input {
-  position: absolute;
-  display: block;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  color: #adadad;
-  font-family: Nunito, sans-serif;
+  position: absolute !important;
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  top: 0 !important;
+  left: 0 !important;
+  pointer-events: none !important;
+  color: #adadad !important;
+  font-family: Nunito, sans-serif !important;
 }
 
 .focus-input::before {
-  content: "";
-  display: block;
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  -webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  -moz-transition: all 0.4s;
-  transition: all 0.4s;
-  background: #6a7dfe;
-  background: -webkit-linear-gradient(to left, #21d4fd, #b721ff);
-  background: -o-linear-gradient(to left, #21d4fd, #b721ff);
-  background: -moz-linear-gradient(to left, #21d4fd, #b721ff);
-  background: linear-gradient(to left, #21d4fd, #b721ff);
+  content: "" !important;
+  display: block !important;
+  position: absolute !important;
+  bottom: -2px !important;
+  left: 0 !important;
+  width: 0 !important;
+  height: 2px !important;
+  -webkit-transition: all 0.4s !important;
+  -o-transition: all 0.4s !important;
+  -moz-transition: all 0.4s !important;
+  transition: all 0.4s !important;
+  background: #6a7dfe !important;
+  background: -webkit-linear-gradient(to left, #21d4fd, #b721ff) !important;
+  background: -o-linear-gradient(to left, #21d4fd, #b721ff) !important;
+  background: -moz-linear-gradient(to left, #21d4fd, #b721ff) !important;
+  background: linear-gradient(to left, #21d4fd, #b721ff) !important;
 }
 
 .focus-input::after {
-  font-family: Nunito, sans-serif;
-  font-size: 15px;
-  color: #999999;
-  border: 0 none;
-  line-height: 1.2;
-  content: attr(data-placeholder);
-  display: block;
-  width: 100%;
-  position: absolute;
-  top: 16px;
-  left: 0px;
-  padding-left: 5px;
-  -webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  -moz-transition: all 0.4s;
-  transition: all 0.4s;
+  font-family: Nunito, sans-serif !important;
+  font-size: 15px !important;
+  color: #999999 !important;
+  line-height: 1.2 !important;
+  content: attr(data-placeholder) !important;
+  display: block !important;
+  width: 100% !important;
+  position: absolute !important;
+  top: 16px !important;
+  left: 0px !important;
+  padding-left: 5px !important;
+  -webkit-transition: all 0.4s !important;
+  -o-transition: all 0.4s !important;
+  -moz-transition: all 0.4s !important;
+  transition: all 0.4s !important;
 }
 
 .input:focus {
-  outline: 0;
+  outline: 0 !important;
 }
 
 .input:focus+.focus-input::after {
-  top: -15px;
+  top: -15px !important;
 }
 
 .input:focus+.focus-input::before {
-  width: 100%;
+  width: 100% !important;
 }
 
 .has-val+.focus-input::after {
-  top: -15px;
-
+  top: -15px !important;
 }
 
 .has-val+.focus-input::before {
-  width: 100%;
+  width: 100% !important;
 }
 
 .container-login-form-btn {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding-bottom: 13px;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  padding-bottom: 13px !important;
 }
 
 .login-form-btn {
-  font-size: 15px;
-  border: none;
-  border-radius: 10px;
-  color: #fff;
-  line-height: 1.2;
-  text-transform: uppercase;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 50px;
-  background: #6a7dfe;
-  background: -webkit-linear-gradient(to left, #21d4fd, #b721ff);
-  background: -o-linear-gradient(to left, #21d4fd, #b721ff);
-  background: -moz-linear-gradient(to left, #21d4fd, #b721ff);
-  background: linear-gradient(to left, #21d4fd, #b721ff);
+  font-size: 15px !important;
+  border: none !important;
+  border-radius: 10px !important;
+  color: #fff !important;
+  line-height: 1.2 !important;
+  text-transform: uppercase !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 100% !important;
+  height: 50px !important;
+  background: #6a7dfe !important;
+  background: -webkit-linear-gradient(to left, #21d4fd, #b721ff) !important;
+  background: -o-linear-gradient(to left, #21d4fd, #b721ff) !important;
+  background: -moz-linear-gradient(to left, #21d4fd, #b721ff) !important;
+  background: linear-gradient(to left, #21d4fd, #b721ff) !important;
 }
 
 .login-form-btn:hover {
-  cursor: pointer;
+  cursor: pointer !important;
 }
 
 .text-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 50px;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin-top: 50px !important;
 }
 
 .txt1 {
-  font-size: 14px;
-  color: #adadad;
-  line-height: 1.5;
-  padding-right: 5px;
+  font-size: 14px !important;
+  color: #adadad !important;
+  line-height: 1.5 !important;
+  padding-right: 5px !important;
 }
 
 .txt2 {
-  font-size: 14px;
-  color: #6a7dfe;
-  line-height: 1.5;
-  text-decoration: none;
+  font-size: 14px !important;
+  color: #6a7dfe !important;
+  line-height: 1.5 !important;
+  text-decoration: none !important;
 }
-

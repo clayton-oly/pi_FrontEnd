@@ -1,5 +1,5 @@
 import React, { ChangeEvent, useEffect, useState } from 'react';
-import { Box, Button, Grid, TextField, Typography } from '@material-ui/core';
+import { Box, Grid, Typography } from '@material-ui/core';
 import { Link, useNavigate } from 'react-router-dom';
 import useLocalStorage from 'react-use-localstorage';
 
@@ -9,8 +9,6 @@ import console from '../../assets/console.png';
 import './Login.css'
 
 function Login () {
-    const [email, setEmail] = useState("")
-    const [password, setPassword] = useState("")
 
 // Redireciona o usuário para determinada pagina
 let history = useNavigate()
@@ -59,15 +57,16 @@ async function logar(e: ChangeEvent<HTMLFormElement>){
         <Grid className='container'>
             <Box className='container-login'>
                 <Box className='wrap-login'>
-                    <form onSubmit={ logar }>
+                    <form onSubmit={ logar } className='login-form'>
                         <span className='login-form-title'>Bem Vindo!</span>
+
                         <span className='login-form-title'>
                             <img src={console} alt='NSG' />
                         </span>
 
                         <Box className='wrap-input'>
                             <input 
-                            className={email !== "" ? 'has-val input' : 'input'} 
+                            className={userLogin.usuario !== "" ? 'has-val input' : 'input'} 
                             type="email" 
                             value={ userLogin.usuario}
                             name='usuario'
@@ -78,7 +77,7 @@ async function logar(e: ChangeEvent<HTMLFormElement>){
 
                         <Box className='wrap-input'>
                             <input 
-                            className={password !== "" ? 'has-val input' : 'input'} 
+                            className={userLogin.senha !== "" ? "has-val input" : "input"}
                             type="password" 
                             value={ userLogin.senha}
                             name='senha'
@@ -87,15 +86,15 @@ async function logar(e: ChangeEvent<HTMLFormElement>){
                             <span className='focus-input' data-placeholder='Password'></span>
                         </Box>
 
-                        <Box className="container-login-form-btn">
+                        <div className="container-login-form-btn">
                             <button className="login-form-btn" >Login</button>
-                        </Box>
+                        </div>
 
                         <Box className="text-center">
                             <span className="txt1">Nao possui conta?</span>
 
                             <Link to='/cadastro'>
-                                <Typography variant='subtitle1' gutterBottom align='center' className='textos1'>Cadastre-se</Typography>
+                                <Typography variant='subtitle1' gutterBottom align='center' className='txt2'>Cadastre-se</Typography>
                             </Link>
                         </Box>
 
