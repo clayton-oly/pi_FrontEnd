@@ -1,9 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 import { Box, Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
-import './deletarProduto.css';
 import { useNavigate, useParams } from 'react-router-dom';
-import useLocalStorage from 'react-use-localstorage';
 import { buscaId, deleteId } from '../../../service/Service';
+import Produto from '../../../models/Produto';
+import { TokenState } from '../../../store/tokens/userReducer';
+import { useSelector } from 'react-redux';
+import { toast } from 'react-toastify';
+import './DeletarProduto.css';
 
 function DeletarProduto() {
     let navigate = useNavigate();
@@ -15,17 +18,27 @@ function DeletarProduto() {
 
     useEffect(() => {
         if (token == "") {
-            alert("Você precisa estar logado")
-            navigate("/login")
-
+          toast.error('Você precisa estar logado', {
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: false,
+            theme: "colored",
+            progress: undefined,
+        });
+        navigate("/login")
+    
         }
     }, [token])
 
-    useEffect(() => {
-        if (id !== undefined) {
+    useEffect(() =>{
+        if(id !== undefined){
             findById(id)
         }
     }, [id])
+
 
     async function findById(id: string) {
         buscaId(`/produto/${id}`, setProduto, {

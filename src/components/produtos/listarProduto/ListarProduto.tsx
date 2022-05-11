@@ -6,7 +6,7 @@ import './ListarProduto.css';
 import { useNavigate } from 'react-router-dom';
 import { busca } from '../../../service/Service';
 import { useSelector } from 'react-redux';
-import { TokenState } from '../../../store/tokens/tokensReducer';
+import { TokenState } from '../../../store/tokens/userReducer';
 
 function ListarProduto() {
     const [produtos, setProdutos] = useState<Produto[]>([])
@@ -17,14 +17,14 @@ function ListarProduto() {
 
     useEffect(() => {
         if (token == '') {
-            alert("VocÃª precisa estar logado")
+            alert("Você precisa estar logado")
             navigate("/login")
         }
     }, [token])
 
 
     async function getProduto() {
-        await busca("/produtos", setProdutos, {
+        await busca("/produtos/all", setProdutos, {
             headers: {
                 'Authorization': token
             }
@@ -39,7 +39,7 @@ function ListarProduto() {
     return (
         <>
             {
-                produtos.map(produtos => (
+                produtos.map(produto => (
                     <Box m={2} >
                         <Card variant="outlined">
                             <CardContent>
@@ -47,41 +47,41 @@ function ListarProduto() {
                                     Produto
                                 </Typography>
                                 <Typography variant="h5" component="h2">
-                                    {produtos.nome}
+                                    {produto.nome}
                                 </Typography>
                                 <Typography variant="h5" component="h2">
-                                    {produtos.descricao}
+                                    {produto.descricao}
                                 </Typography>
                                 <Typography variant="h5" component="h2">
-                                    {produtos.preco}
+                                    {produto.preco}
                                 </Typography>
                                 <Typography variant="h5" component="h2">
-                                    {produtos.tipo}
+                                    {produto.tipo}
                                 </Typography>
                                 <Typography variant="h5" component="h2">
-                                    {produtos.classInd}
+                                    {produto.classInd}
                                 </Typography>
                                 <Typography variant="h5" component="h2">
-                                    {produtos.console}
+                                    {produto.console}
                                 </Typography>
                                 <Typography variant="h5" component="h2">
-                                    {produtos.foto}
+                                    {produto.foto}
                                 </Typography>
                                 <Typography variant="body2" component="p">
-                                    {produtos.categoria?.genero}
+                                    {produto.categoria?.genero}
                                 </Typography>
                             </CardContent>
                             <CardActions>
                                 <Box display="flex" justifyContent="center" mb={1.5} >
 
-                                    <Link to={`/formularioProduto/${produtos.id}`} className="text-decorator-none">
+                                    <Link to={`/formularioProduto/${produto.id}`} className="text-decorator-none">
                                         <Box mx={1}>
                                             <Button variant="contained" className="marginLeft" size='small' color="primary" >
                                                 Atualizar
                                             </Button>
                                         </Box>
                                     </Link>
-                                    <Link to={`/deletarProduto/${produtos.id}`} className="text-decorator-none">
+                                    <Link to={`/deletarProduto/${produto.id}`} className="text-decorator-none">
                                         <Box mx={1}>
                                             <Button variant="contained" size='small' color="secondary">
                                                 Deletar
