@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container-home {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-home .carousel {
+    display: flex;
+    /* overflow-x: auto;
+    scroll-behavior: smooth; */
+}
+
+.container-home .carousel .item .image {
+    width: 100vw;
+    min-height: 100vh;
+    background-image: url(./assets/kena-bridge-of-spirits\ 1.jpg);
+    position: relative;
+    background-size: cover;
+}
+
+.view-produtos {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+

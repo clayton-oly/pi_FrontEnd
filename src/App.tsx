@@ -16,14 +16,15 @@ import 'react-toastify/dist/ReactToastify.css'
 import './App.css';
 import CadastraProduto from './components/produtos/cadastrarProduto/CadastrarProduto';
 import DeletaProduto from './components/produtos/deletarProduto/DeletarProduto';
+import Navbar from './components/estaticos/navbar/Navbar';
 
 
 function App() {
   return (
     <Provider store={store}>
       <ToastContainer />
-
       <Router>
+        <Navbar />
         <div style={{ minHeight: '100vh' }}>
           <Routes>
             <Route path="/" element={<Login />} />
@@ -55,10 +56,8 @@ function App() {
           </Routes>
         </div>
         <Footer />
-
       </Router>
     </Provider>
-
   );
 }
 
