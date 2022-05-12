@@ -1,15 +1,15 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router';
 import { useSelector } from 'react-redux';
-import { TokenState } from '../../store/tokens/userReducer';
 import { toast } from 'react-toastify';
 import Navbar from '../../components/estaticos/navbar/Navbar'
 import './Home.css';
+import { UserState } from '../../store/user/userReducer';
 
 function Home() {
 
     let navigate = useNavigate();
-    const token = useSelector<TokenState, TokenState["tokens"]>(
+    const token = useSelector<UserState, UserState["tokens"]>(
         (state) => state.tokens
       );
     

@@ -3,15 +3,16 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { buscaId, post, put } from '../../../service/Service';
 import Categoria from '../../../models/Categoria';
 import { useSelector } from 'react-redux';
-import { TokenState } from '../../../store/tokens/userReducer';
+
 import { toast } from 'react-toastify';
 import './CadastroCategoria.css';
 import { Button, Container, TextField, Typography } from '@mui/material';
+import { UserState } from '../../../store/user/userReducer';
 
 function CadastroCategoria() {
     let history = useNavigate();
     const { id } = useParams<{ id: string }>();
-    const token = useSelector<TokenState, TokenState["tokens"]>(
+    const token = useSelector<UserState, UserState["tokens"]>(
         (state) => state.tokens
     );
 

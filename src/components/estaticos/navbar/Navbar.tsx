@@ -4,13 +4,13 @@ import { Link } from 'react-router-dom';
 import {useNavigate } from 'react-router-dom'
 import './Navbar.css'
 import { useSelector } from 'react-redux';
-import { TokenState } from '../../../store/tokens/userReducer';
 import { useDispatch } from "react-redux";
-import { addToken } from '../../../store/tokens/action';
+import { addToken } from '../../../store/user/actions';
 import {toast} from 'react-toastify';
+import { UserState } from '../../../store/user/userReducer';
 
 function Navbar() {
-  const token = useSelector<TokenState, TokenState["tokens"]>(
+  const token = useSelector<UserState, UserState["tokens"]>(
       (state) => state.tokens
     );
   let navigate = useNavigate();

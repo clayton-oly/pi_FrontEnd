@@ -5,8 +5,6 @@ import Login from './paginas/login/Login';
 import CadastroUsuario from './paginas/cadastroUsuario/CadastroUsuario';
 import Footer from './components/estaticos/footer/Footer';
 import SobreNos from './paginas/sobreNos/SobreNos';
-import DeletarProduto from './components/produtos/deletarProduto/DeletarProduto';
-import CadastrarProduto from './components/produtos/cadastrarProduto/CadastrarProduto';
 import ListarProduto from './components/produtos/listarProduto/ListarProduto';
 import { Provider } from 'react-redux';
 import { ToastContainer } from 'react-toastify';
@@ -16,6 +14,8 @@ import CadastroCategoria from './components/categorias/cadastroCategoria/Cadastr
 import DeletarCategoria from './components/categorias/deletarCategoria/DeletarCategoria';
 import 'react-toastify/dist/ReactToastify.css'
 import './App.css';
+import CadastraProduto from './components/produtos/cadastrarProduto/CadastrarProduto';
+import DeletaProduto from './components/produtos/deletarProduto/DeletarProduto';
 
 
 function App() {
@@ -44,11 +44,11 @@ function App() {
 
             <Route path="/formularioCategoria/:id" element={<CadastroCategoria />} />
 
-            <Route path="/formularioProduto" element={<CadastrarProduto />} />
+            <Route path="/formularioProduto" element={<CadastraProduto />} />
 
-            <Route path="/formularioProduto/:id" element={<CadastrarProduto />} />
+            <Route path="/formularioProduto/:id" element={<CadastraProduto />} />
 
-            <Route path="/deletarProduto/:id" element={<DeletarProduto />} />
+            <Route path="/deletarProduto/:id" element={<DeletaProduto />} />
 
             <Route path="/deletarCategoria/:id" element={<DeletarCategoria />} />
 

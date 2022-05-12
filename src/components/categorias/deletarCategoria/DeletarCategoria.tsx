@@ -5,15 +5,16 @@ import { buscaId, deleteId } from '../../../service/Service';
 import Categoria from '../../../models/Categoria';
 import "./DeletarCategoria.css";
 import { useSelector } from 'react-redux';
-import { TokenState } from '../../../store/tokens/userReducer';
+
 import { toast } from 'react-toastify';
+import { UserState } from '../../../store/user/userReducer';
 
 function DeletarCategoria() {
     let history = useNavigate();
     const { id } = useParams<{ id: string }>();
     const [categoria, setCategoria] = useState<Categoria>();
 
-    const token = useSelector<TokenState, TokenState["tokens"]>(
+    const token = useSelector<UserState, UserState["tokens"]>(
         (state) => state.tokens
     )
 

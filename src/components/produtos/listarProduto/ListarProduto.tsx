@@ -6,12 +6,16 @@ import './ListarProduto.css';
 import { useNavigate } from 'react-router-dom';
 import { busca } from '../../../service/Service';
 import { useSelector } from 'react-redux';
-import { TokenState } from '../../../store/tokens/userReducer';
+import { UserState } from '../../../store/user/userReducer';
+
 
 function ListarProduto() {
-    const [produtos, setProdutos] = useState<Produto[]>([])
+    
     let navigate = useNavigate();
-    const token = useSelector<TokenState, TokenState["tokens"]>(
+
+    const [produtos, setProdutos] = useState<Produto[]>([])
+    
+    const token = useSelector<UserState, UserState["tokens"]>(
         (state) => state.tokens
     );
 

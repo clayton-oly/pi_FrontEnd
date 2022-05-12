@@ -5,7 +5,7 @@ import UserLogin from '../../models/UserLogin';
 import { login } from '../../service/Service';
 import console from '../../assets/console.png';
 import { useDispatch } from 'react-redux';
-import { addToken } from "../../store/tokens/action";
+import { addToken } from "../../store/user/actions";
 import { toast } from 'react-toastify';
 import './Login.css'
 

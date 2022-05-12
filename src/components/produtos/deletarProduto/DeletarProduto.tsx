@@ -3,32 +3,32 @@ import { Box, Card, CardActions, CardContent, Button, Typography } from '@materi
 import { useNavigate, useParams } from 'react-router-dom';
 import { buscaId, deleteId } from '../../../service/Service';
 import Produto from '../../../models/Produto';
-import { TokenState } from '../../../store/tokens/userReducer';
 import { useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
 import './DeletarProduto.css';
+import { UserState } from '../../../store/user/userReducer';
 
-function DeletarProduto() {
+function DeletaProduto() {
     let navigate = useNavigate();
-    const { id } = useParams<{ id: string }>();
-    const token = useSelector<TokenState, TokenState["tokens"]>(
-        (state) => state.tokens
+    const { id } = useParams<{id: string}>();
+    const [produto, setProdutos] = useState<Produto>()
+    const token = useSelector<UserState, UserState["tokens"]>(
+      (state) => state.tokens
     );
-    const [produto, setProduto] = useState<Produto>()
-
+    
     useEffect(() => {
         if (token == "") {
           toast.error('Você precisa estar logado', {
-            position: "top-right",
+            position: 'top-right',
             autoClose: 2000,
             hideProgressBar: false,
             closeOnClick: true,
             pauseOnHover: false,
             draggable: false,
-            theme: "colored",
+            theme: 'colored',
             progress: undefined,
         });
-        navigate("/login")
+            navigate("/login")
     
         }
     }, [token])
@@ -41,26 +41,36 @@ function DeletarProduto() {
 
 
     async function findById(id: string) {
-        buscaId(`/produto/${id}`, setProduto, {
+        buscaId(`/produtos/${id}`, setProdutos, {
             headers: {
-                'Authorization': token
+              'Authorization': token
             }
-        })
-    }
+          })
+        }
 
-    function sim() {
-        navigate('/produtos')
-        deleteId(`/produto/${id}`, {
-            headers: {
+        function sim() {
+            navigate('/produtos')
+            deleteId(`/produtos/${id}`, {
+              headers: {
                 'Authorization': token
-            }
-        });
-        alert('Tema deletado com sucesso');
-    }
+              }
+            });
+            toast.success('Produto deletado com sucesso', {
+              position: 'top-right',
+              autoClose: 2000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: false,
+              draggable: false,
+              theme: 'colored',
+              progress: undefined,
+          });
+          }
 
-    function nao() {
-        navigate('/produtos')
-    }
+          function nao() {
+            navigate('/produtos')
+          }
+
     return (
         <>
             <Box m={2}>
@@ -71,19 +81,19 @@ function DeletarProduto() {
                                 Deseja deletar o Produto:
                             </Typography>
                             <Typography color="textSecondary">
-                                Produto
+                                 {produto?.nome}
                             </Typography>
                         </Box>
                     </CardContent>
                     <CardActions>
                         <Box display="flex" justifyContent="start" ml={1.0} mb={2} >
                             <Box mx={2}>
-                                <Button variant="contained" className="marginLeft" size='large' color="primary">
+                                <Button onClick={sim} variant="contained" className="marginLeft" size='large' color="primary">
                                     Sim
                                 </Button>
                             </Box>
                             <Box mx={2}>
-                                <Button variant="contained" size='large' color="secondary">
+                                <Button onClick={nao} variant="contained" size='large' color="secondary">
                                     Não
                                 </Button>
                             </Box>
@@ -94,4 +104,4 @@ function DeletarProduto() {
         </>
     );
 }
-export default DeletarProduto;
+export default DeletaProduto;

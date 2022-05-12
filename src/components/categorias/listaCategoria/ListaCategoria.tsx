@@ -5,14 +5,14 @@ import Categoria from '../../../models/Categoria';
 import {useNavigate} from 'react-router-dom';
 import { busca } from '../../../service/Service';
 import { useSelector } from 'react-redux';
-import { TokenState } from '../../../store/tokens/userReducer';
 import { toast } from 'react-toastify';
 import './ListaCategoria.css';
+import { UserState } from '../../../store/user/userReducer';
 
 function ListaCategoria() {
   const [categorias, setCategorias] = useState<Categoria[]>([])
   let navigate = useNavigate();
-  const token = useSelector<TokenState, TokenState["tokens"]>(
+  const token = useSelector<UserState, UserState["tokens"]>(
     (state) => state.tokens
   );
 
