@@ -5,7 +5,6 @@ import { buscaId, deleteId } from '../../../service/Service';
 import Categoria from '../../../models/Categoria';
 import "./DeletarCategoria.css";
 import { useSelector } from 'react-redux';
-
 import { toast } from 'react-toastify';
 import { UserState } from '../../../store/user/userReducer';
 
@@ -71,7 +70,16 @@ function DeletarCategoria() {
             });
             
         } catch (error) {
-            alert('Erro ao deletar!');
+            toast.error('Erro ao deletar.', {
+                position: 'top-right',
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: 'colored',
+                progress: undefined,
+            });
         }
 
     }

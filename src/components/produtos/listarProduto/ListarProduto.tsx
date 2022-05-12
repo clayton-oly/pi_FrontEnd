@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import { busca } from '../../../service/Service';
 import { useSelector } from 'react-redux';
 import { UserState } from '../../../store/user/userReducer';
+import { toast } from 'react-toastify';
 
 
 function ListarProduto() {
@@ -21,7 +22,16 @@ function ListarProduto() {
 
     useEffect(() => {
         if (token == '') {
-            alert("Você precisa estar logado")
+            toast.error('Você precisa estar logado', {
+                position: 'top-right',
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: 'colored',
+                progress: undefined,
+            });
             navigate("/login")
         }
     }, [token])
@@ -101,6 +111,5 @@ function ListarProduto() {
         </>
     );
 }
-
 
 export default ListarProduto;

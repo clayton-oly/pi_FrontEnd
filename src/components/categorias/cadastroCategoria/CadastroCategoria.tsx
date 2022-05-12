@@ -24,7 +24,7 @@ function CadastroCategoria() {
 
     useEffect(() => {
         if (token === "") {
-            toast.info('Você precisa estar logado!', {
+            toast.error('Você precisa estar logado!', {
                 position: "top-right",
                 autoClose: 2000,
                 hideProgressBar: false,
@@ -72,7 +72,7 @@ function CadastroCategoria() {
                         'Authorization': token
                     }
                 })
-                toast.success('Categoria atualizado com sucesso', {
+                toast.success('Categoria atualizada com sucesso', {
                     position: "top-right",
                     autoClose: 2000,
                     hideProgressBar: false,
@@ -88,7 +88,7 @@ function CadastroCategoria() {
                         'Authorization': token
                     }
                 })
-                toast.success('Categoria cadastrado com sucesso', {
+                toast.success('Categoria cadastrada com sucesso', {
                     position: "top-right",
                     autoClose: 2000,
                     hideProgressBar: false,
