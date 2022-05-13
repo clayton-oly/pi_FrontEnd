@@ -40,8 +40,8 @@ function Navbar() {
 
     if (token !== "") {
         navbarComponent =
-            <AppBar position="static">
-                <Toolbar variant="dense" className='menu'>
+            <AppBar className='menu-container'>
+                <Toolbar variant="dense" className='menu-toolbar'>
                 <Link to="/home" className="text-decorator-none">
                     <Box className='cursor'>
                         <Typography variant="h5" color="inherit" className='menu-logo'>

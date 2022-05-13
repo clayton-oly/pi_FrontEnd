@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { Box, Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
+import { Box, Card, CardActions, CardContent, Button, Typography, makeStyles, Grid, Container } from '@material-ui/core';
 import Produto from '../../../models/Produto';
 import './ListarProduto.css';
 import { useNavigate } from 'react-router-dom';
@@ -50,64 +50,108 @@ function ListarProduto() {
         getProduto()
     }, [produtos.length])
 
+    const useStyles = makeStyles((theme) => ({
+        icon: {
+          marginRight: theme.spacing(2),
+        },
+        heroContent: {
+          backgroundColor: theme.palette.background.paper,
+          padding: theme.spacing(8, 0, 6),
+        },
+        heroButtons: {
+          marginTop: theme.spacing(4),
+        },
+        cardGrid: {
+          paddingTop: theme.spacing(8),
+          paddingBottom: theme.spacing(8),
+        },
+        card: {
+          height: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+        },
+        cardMedia: {
+          paddingTop: '56.25%', // 16:9
+        },
+        cardContent: {
+          flexGrow: 1,
+        },
+        footer: {
+          backgroundColor: theme.palette.background.paper,
+          padding: theme.spacing(6),
+        },
+      }));
+
+    const classes = useStyles();
+
     return (
         <>
-            {
-                produtos.map(produto => (
-                    <Box m={2} >
-                        <Card variant="outlined">
-                            <CardContent>
-                                <Typography color="textSecondary" gutterBottom>
-                                    Produto
-                                </Typography>
-                                <Typography variant="h5" component="h2">
-                                    {produto.nome}
-                                </Typography>
-                                <Typography variant="h5" component="h2">
-                                    {produto.descricao}
-                                </Typography>
-                                <Typography variant="h5" component="h2">
-                                    {produto.preco}
-                                </Typography>
-                                <Typography variant="h5" component="h2">
-                                    {produto.tipo}
-                                </Typography>
-                                <Typography variant="h5" component="h2">
-                                    {produto.classInd}
-                                </Typography>
-                                <Typography variant="h5" component="h2">
-                                    {produto.console}
-                                </Typography>
-                                <Typography variant="h5" component="h2">
-                                    {produto.foto}
-                                </Typography>
-                                <Typography variant="body2" component="p">
-                                    {produto.categoria?.genero}
-                                </Typography>
-                            </CardContent>
-                            <CardActions>
-                                <Box display="flex" justifyContent="center" mb={1.5} >
+            <main>
+        {/* Hero unit */}
+        <div className={classes.heroContent}>
+          <Container maxWidth="sm">
+            <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
+              Todos os jogos
+            </Typography>
+            <Typography variant="h5" align="center" color="textSecondary" paragraph>
+              Something short and leading about the collection below—its contents, the creator, etc.
+              Make it short and sweet, but not too short so folks don&apos;t simply skip over it
+              entirely.
+            </Typography>
+            <div className={classes.heroButtons}>
+              <Grid container spacing={2} justifyContent="center">
+                <Grid item>
+                  <Button variant="contained" color="primary">
+                    Main call to action
+                  </Button>
+                </Grid>
+                <Grid item>
+                  <Button variant="outlined" color="primary">
+                    Secondary action
+                  </Button>
+                </Grid>
+              </Grid>
+            </div>
+          </Container>
+        </div>
+        <Container className={classes.cardGrid} maxWidth="md">
+          {/* End hero unit */}
+          <Grid container spacing={4}>
+            {produtos.map((produto) => (
+              <Grid item key={produto.id} xs={12} sm={6} md={4}>
+                <Card className={classes.card}>
+                  <img src={produto.foto} />
+                  <CardContent className={classes.cardContent}>
+                    <Typography gutterBottom variant="h5" component="h2">
+                      {produto.nome}
+                    </Typography>
+                    <Typography>
+                    {produto.descricao}
+                    </Typography>
+                  </CardContent>
+                  <Box display="flex" justifyContent="center" mb={1.5} >
 
-                                    <Link to={`/formularioProduto/${produto.id}`} className="text-decorator-none">
-                                        <Box mx={1}>
-                                            <Button variant="contained" className="marginLeft" size='small' color="primary" >
-                                                Atualizar
-                                            </Button>
-                                        </Box>
-                                    </Link>
-                                    <Link to={`/deletarProduto/${produto.id}`} className="text-decorator-none">
-                                        <Box mx={1}>
-                                            <Button variant="contained" size='small' color="secondary">
-                                                Deletar
-                                            </Button>
-                                        </Box>
-                                    </Link>
-                                </Box>
-                            </CardActions>
-                        </Card>
-                    </Box>
-                ))
-            }
+                    <Link to={`/formularioProduto/${produto.id}`} className="text-decorator-none">
+                      <Box mx={1}>
+                        <Button variant="contained" className="marginLeft" size='small' color="primary" >
+                          Atualizar
+                        </Button>
+                      </Box>
+                    </Link>
+                    <Link to={`/deletarProduto/${produto.id}`} className="text-decorator-none">
+                      <Box mx={1}>
+                        <Button variant="contained" size='small' color="secondary">
+                          Deletar
+                        </Button>
+                      </Box>
+                    </Link>
+                  </Box>
+                </Card>
+              </Grid>
+            ))}
+          </Grid>
+        </Container>
+      </main>
         </>
     );
 }

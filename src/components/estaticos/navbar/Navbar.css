@@ -2,8 +2,12 @@
     background-color: black !important;
 }
 
-.menu {
-    background-color: #000;
+.menu-container {
+    position: fixed;
+    background-color:  rgba(0, 0, 0, 0.8) !important;
+}
+
+.menu-toolbar {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -16,7 +20,7 @@
 
 .menu-text {
     font-family: 'Roboto Mono', sans-serif !important;
-    color: rgb(235, 50, 127) !important;
+    color: rgb(223, 19, 104) !important;
 }
 
 .nav-menu-icon {

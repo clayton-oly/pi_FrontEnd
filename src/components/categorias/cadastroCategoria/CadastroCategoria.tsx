@@ -8,6 +8,7 @@ import { toast } from 'react-toastify';
 import './CadastroCategoria.css';
 import { Button, Container, TextField, Typography } from '@mui/material';
 import { UserState } from '../../../store/user/userReducer';
+import { Grid, Box } from '@material-ui/core';
 
 function CadastroCategoria() {
     let history = useNavigate();
@@ -38,8 +39,8 @@ function CadastroCategoria() {
         }
     }, [token])
 
-    useEffect(() =>{
-        if(id !== undefined){
+    useEffect(() => {
+        if (id !== undefined) {
             findById(id)
         }
     }, [id])
@@ -47,78 +48,84 @@ function CadastroCategoria() {
     async function findById(id: string) {
         buscaId(`/categorias/${id}`, setCategoria, {
             headers: {
-              'Authorization': token
+                'Authorization': token
             }
-          })
-        }
+        })
+    }
 
-        function updatedCategoria(e: ChangeEvent<HTMLInputElement>) {
+    function updatedCategoria(e: ChangeEvent<HTMLInputElement>) {
 
-            setCategoria({
-                ...categoria,
-                [e.target.name]: e.target.value,
+        setCategoria({
+            ...categoria,
+            [e.target.name]: e.target.value,
+        })
+
+    }
+
+    async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
+        e.preventDefault()
+        console.log("categorias " + JSON.stringify(categoria))
+
+        if (id !== undefined) {
+            console.log(categoria)
+            put(`/categorias`, categoria, setCategoria, {
+                headers: {
+                    'Authorization': token
+                }
             })
-    
+            toast.success('Categoria atualizada com sucesso', {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined,
+            });
+        } else {
+            post(`/categorias`, categoria, setCategoria, {
+                headers: {
+                    'Authorization': token
+                }
+            })
+            toast.success('Categoria cadastrada com sucesso', {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined,
+            });
         }
-        
-        async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
-            e.preventDefault()
-            console.log("categorias " + JSON.stringify(categoria))
-    
-            if (id !== undefined) {
-                console.log(categoria)
-                put(`/categorias`, categoria, setCategoria, {
-                    headers: {
-                        'Authorization': token
-                    }
-                })
-                toast.success('Categoria atualizada com sucesso', {
-                    position: "top-right",
-                    autoClose: 2000,
-                    hideProgressBar: false,
-                    closeOnClick: true,
-                    pauseOnHover: false,
-                    draggable: false,
-                    theme: "colored",
-                    progress: undefined,
-                    });
-            } else {
-                post(`/categorias`, categoria, setCategoria, {
-                    headers: {
-                        'Authorization': token
-                    }
-                })
-                toast.success('Categoria cadastrada com sucesso', {
-                    position: "top-right",
-                    autoClose: 2000,
-                    hideProgressBar: false,
-                    closeOnClick: true,
-                    pauseOnHover: false,
-                    draggable: false,
-                    theme: "colored",
-                    progress: undefined,
-                    });
-            }
-            back()
-    
-        }
-    
-        function back() {
-            history('/categorias')
-            
-        }
-        return (
-            <Container maxWidth="sm" className="topo">
-                <form onSubmit={onSubmit}>
-                    <Typography variant="h3" color="textSecondary" component="h1" align="center" >Formulário de cadastro categoria</Typography>
-                    <TextField value={categoria.genero} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)} id="genero" label="genero" variant="outlined" name="genero" margin="normal" fullWidth />
-                    <TextField value={categoria.descricao} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)} id="descricao" label="descricao" variant="outlined" name="descricao" margin="normal" fullWidth />
-                    <Button type="submit" variant="contained" color="primary">
+        back()
+
+    }
+
+    function back() {
+        history('/categorias')
+
+    }
+    return (
+        <Grid container className="container-cad-categoria">
+           <Grid className='container-cad-categoria-form'>
+               <Box className='box-cad-categoria-text'>
+               <Typography variant="h4" color="textSecondary" component="h1" align="center" >Cadastro para gênero de jogos</Typography>
+               </Box>
+               <Box className='box-cad-categoria-form'>
+               <form onSubmit={onSubmit}>
+                    <TextField value={categoria.genero} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)} id="genero" label="Gênero" variant="outlined" name="genero" margin="normal" fullWidth />
+                    <TextField value={categoria.descricao} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)} id="descricao" label="Descrição" variant="outlined" name="descricao" margin="normal" fullWidth />
+                    <Button className='btnFinalizar' type="submit" variant="contained" color="primary">
                         Finalizar
                     </Button>
                 </form>
-            </Container>
-        )
-    }
+               </Box>
+           </Grid>
+        </Grid>
+    )
+}
 
 export default CadastroCategoria;
