@@ -1,0 +1,31 @@
+.container-cad-produto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.container-cad-produto-form {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    gap: 40px;
+}
+
+.box-cad-produto-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.box-cad-produto-form {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+}
+
+.box-cad-produto-form .btnFinalizar {
+    background-color: rgb(223, 19, 104);
+}

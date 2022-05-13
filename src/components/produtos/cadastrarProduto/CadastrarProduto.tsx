@@ -12,38 +12,29 @@ import { UserState } from '../../../store/user/userReducer';
 
 
 function CadastraProduto() {
-    
+
     let navigate = useNavigate();
-    
+
     const { id } = useParams<{ id: string }>();
-    
+
     const [categorias, setCategorias] = useState<Categoria[]>([])
-   
+
     const token = useSelector<UserState, UserState["tokens"]>(
         (state) => state.tokens
     );
-    
+
     // Pega o ID guardado no Store
     const userId = useSelector<UserState, UserState["id"]>(
         (state) => state.id
     );
 
-    useEffect(() => {
-        if (token == "") {
-            toast.error('Você precisa estar logado', {
-                position: 'top-right',
-                autoClose: 2000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: false,
-                draggable: false,
-                theme: 'colored',
-                progress: undefined,
-            });
-            navigate("/login")
-
-        }
-    }, [token])
+    const [user, setUser] = useState<User>({
+        id: +userId,    // Faz uma conversão de String para Number
+        nome: '',
+        usuario: '',
+        senha: '',
+        foto: ''
+    })
 
     const [categoria, setCategoria] = useState<Categoria>(
         {
@@ -67,18 +58,31 @@ function CadastraProduto() {
         usuario: null
     })
 
-    const [user, setUser] = useState<User>({
-        id: +userId,    // Faz uma conversão de String para Number
-        nome: '',
-        usuario: '',
-        senha: '',
-        foto: ''
-    })
+
+
+    useEffect(() => {
+        if (token == "") {
+            toast.error('Você precisa estar logado', {
+                position: 'top-right',
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: 'colored',
+                progress: undefined,
+            });
+            navigate("/login")
+
+        }
+    }, [token])
+
 
     useEffect(() => {
         setProduto({
             ...produto,
-            categoria: categoria
+            categoria: categoria,
+            usuario: user
         })
     }, [categoria])
 
@@ -111,7 +115,6 @@ function CadastraProduto() {
             ...produto,
             [e.target.name]: e.target.value,
             categoria: categoria,
-            usuario: user
         })
 
     }
@@ -119,38 +122,65 @@ function CadastraProduto() {
     async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
         e.preventDefault()
 
-        if (id !== undefined) {
-            put(`/produtos`, produto, setProduto, {
-                headers: {
-                    'Authorization': token
-                }
-            })
-            toast.success('Produto atualizado com sucesso', {
-                position: 'top-right',
-                autoClose: 2000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: false,
-                draggable: false,
-                theme: 'colored',
-                progress: undefined,
-            });
+        if (id !== undefined) { 
+            console.log(produto)
+            try {
+                await put(`/produtos`, produto, setProduto, {
+                    headers: {
+                        'Authorization': token
+                    }
+                })
+                toast.success('Produto atualizado com sucesso', {
+                    position: 'top-right',
+                    autoClose: 2000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: false,
+                    draggable: false,
+                    theme: 'colored',
+                    progress: undefined,
+                });
+            } catch (error) {
+                toast.error('Erro ao atualizar, verifique os campos', {
+                    position: 'top-right',
+                    autoClose: 2000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: false,
+                    draggable: false,
+                    theme: 'colored',
+                    progress: undefined,
+                });
+            }
         } else {
-            post(`/produtos`, produto, setProduto, {
-                headers: {
-                    'Authorization': token
-                }
-            })
-            toast.success('Produto cadastrado com sucesso', {
-                position: 'top-right',
-                autoClose: 2000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: false,
-                draggable: false,
-                theme: 'colored',
-                progress: undefined,
-            });
+            try {
+                await post(`/produtos`, produto, setProduto, {
+                    headers: {
+                        'Authorization': token
+                    }
+                })
+                toast.success('Produto cadastrado com sucesso', {
+                    position: 'top-right',
+                    autoClose: 2000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: false,
+                    draggable: false,
+                    theme: 'colored',
+                    progress: undefined,
+                });
+            } catch (error) {
+                toast.error('Erro ao atualizar, verifique os campos', {
+                    position: 'top-right',
+                    autoClose: 2000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: false,
+                    draggable: false,
+                    theme: 'colored',
+                    progress: undefined,
+                });
+            }
         }
         back()
 
