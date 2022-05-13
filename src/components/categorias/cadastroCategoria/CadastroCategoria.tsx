@@ -6,7 +6,7 @@ import { useSelector } from 'react-redux';
 
 import { toast } from 'react-toastify';
 import './CadastroCategoria.css';
-import { Button, Container, TextField, Typography } from '@mui/material';
+import { Button, TextField, Typography } from '@mui/material';
 import { UserState } from '../../../store/user/userReducer';
 import { Grid, Box } from '@material-ui/core';
 
