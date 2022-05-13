@@ -5,7 +5,7 @@ import UserLogin from '../../models/UserLogin';
 import { login } from '../../service/Service';
 import console from '../../assets/console.png';
 import { useDispatch } from 'react-redux';
-import { addToken } from "../../store/user/actions";
+import { addId, addToken } from "../../store/user/actions";
 import { toast } from 'react-toastify';
 import './Login.css'
 
@@ -29,13 +29,30 @@ function Login() {
         token: ""
     })
 
-    // Hook de efeito colateral, sempre executa uma função quando o que estiver no seu Array é alterado
-    useEffect(() => {
-        if (token != '') {
-            dispatch(addToken(token));
+    // Crie mais um State para pegar os dados retornados a API
+    const [respUserLogin, setRespUserLogin] = useState<UserLogin>({
+        id: 0,
+        nome: '',
+        usuario: '',
+        senha: '',
+        token: '',
+        foto: ""
+    })
+
+     // Hook de efeito colateral, sempre executa uma função quando o que estiver no seu Array é alterado
+     useEffect(() => {
+        if (respUserLogin.token !== "") {
+
+            // Verifica os dados pelo console (Opcional)
+            //console.log("Token: " + respUserLogin.token)
+           // console.log("ID: " + respUserLogin.id)
+
+            // Guarda as informações dentro do Redux (Store)
+            dispatch(addToken(respUserLogin.token))
+            dispatch(addId(respUserLogin.id.toString()))    // Faz uma conversão de Number para String
             history('/home')
         }
-    }, [token])
+    }, [respUserLogin.token])
 
 
     // Função que junto com a setUserLogin irá atualizar o valor inicial da userLogin
@@ -49,7 +66,7 @@ function Login() {
     async function logar(e: ChangeEvent<HTMLFormElement>) {
         e.preventDefault();
         try {
-            await login(`/usuarios/logar`, userLogin, setToken)
+            await login(`/usuarios/logar`, userLogin, setRespUserLogin)
             toast.success('Usuário logado com sucesso!', {
                 position: "top-right",
                 autoClose: 2000,

@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router';
 import { useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
-import Navbar from '../../components/estaticos/navbar/Navbar'
 import './Home.css';
 import { UserState } from '../../store/user/userReducer';
 import { Box, Grid, Typography } from '@material-ui/core';
