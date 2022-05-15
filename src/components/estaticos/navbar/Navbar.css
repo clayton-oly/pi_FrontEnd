@@ -1,0 +1,35 @@
+.css-hip9hq-MuiPaper-root-MuiAppBar-root {
+    background-color: black !important;
+}
+
+.menu-container {
+    position: fixed;
+    background-color:  rgba(0, 0, 0, 0.8) !important;
+}
+
+.menu-toolbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu-logo {
+    font-family: 'Roboto Mono', sans-serif !important;
+    color: #fff !important;
+}
+
+.menu-text {
+    font-family: 'Roboto Mono', sans-serif !important;
+    color: rgb(223, 19, 104) !important;
+}
+
+.nav-menu-icon {
+    display: flex;
+    flex-direction: row;
+    gap: 18px;
+}
+
+.nav-icon {
+    font-size: 28px;
+    color: #fff;
+}
