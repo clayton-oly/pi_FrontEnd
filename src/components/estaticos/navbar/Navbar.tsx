@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom'
 import './Navbar.css'
 import { useSelector } from 'react-redux';
 import { useDispatch } from "react-redux";
-import { addToken } from '../../../store/user/actions';
+import { addToken } from '../../../store/user/action';
 import { toast } from 'react-toastify';
 import { UserState } from '../../../store/user/userReducer';
 import PersonIcon from '@mui/icons-material/Person';
