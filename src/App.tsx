@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './paginas/home/Home';
 import Login from './paginas/login/Login';
@@ -18,8 +18,9 @@ import CadastraProduto from './components/produtos/cadastrarProduto/CadastrarPro
 import DeletaProduto from './components/produtos/deletarProduto/DeletarProduto';
 import Navbar from './components/estaticos/navbar/Navbar';
 
-
 function App() {
+
+  
   return (
     <Provider store={store}>
       <ToastContainer />
@@ -27,7 +28,7 @@ function App() {
         <Navbar />
         <div style={{ minHeight: '100vh' }}>
           <Routes>
-            <Route path="/" element={<Login />} />
+            <Route path="/" element={<Home  />} />
 
             <Route path="/home" element={<Home />} />
 

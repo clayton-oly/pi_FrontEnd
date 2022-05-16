@@ -3,7 +3,6 @@ import { Box, Grid, Typography } from '@material-ui/core';
 import { Link, useNavigate } from 'react-router-dom';
 import UserLogin from '../../models/UserLogin';
 import { login } from '../../services/Service';
-import console from '../../assets/console.png';
 import { useDispatch } from 'react-redux';
 import { addId, addToken } from "../../store/user/action";
 import { toast } from 'react-toastify';
@@ -105,7 +104,7 @@ function Login() {
                         <span className='login-form-title'>Bem Vindo!</span>
 
                         <span className='login-form-title'>
-                            <img src={console} alt='NSG' />
+                          
                         </span>
 
                         <Box className='wrap-input'>

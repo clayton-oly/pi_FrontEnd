@@ -1,6 +1,8 @@
 import React from 'react';
-import './Home.css';
 import { Box, Grid, Typography } from '@material-ui/core';
+import CarouselC from '../../components/carousel/Carousel';
+
+import './Home.css';
 
 function Home() {
 
@@ -18,11 +20,11 @@ function Home() {
           </Box>
         </Grid>
         <Grid className='view-produtos' xs={12}>
-          <Typography variant='h3'>Cards com produtos em destaque</Typography>
+          <Grid container className='grid-home'>
+            <CarouselC/>
+          </Grid>
         </Grid>
       </Grid>
-
-
     </>
   );
 }
