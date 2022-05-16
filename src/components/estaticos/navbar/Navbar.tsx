@@ -80,6 +80,13 @@ function Navbar() {
                                 </Typography>
                             </Box>
                         </Link>
+                        <Link to="/sobrenos" className="text-decorator-none">
+                            <Box mx={1} className='cursor'>
+                                <Typography variant="h6" color="inherit" className='menu-text'>
+                                    Quem Somos
+                                </Typography>
+                            </Box>
+                        </Link>
                     </Box>
 
                     <Box className='nav-menu-icon'>
