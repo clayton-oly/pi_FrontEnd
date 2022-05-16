@@ -24,7 +24,6 @@ function Footer() {
                     <Box className='footer-infos'>
                         <Box paddingTop={1} className='footer-infos-links'>
                            <Typography gutterBottom className='footer-text-principal'>Navegação</Typography>
-                            <Typography gutterBottom className='footer-text'>Sobre a NSG</Typography>
                             <Typography gutterBottom className='footer-text'>Dúvidas e informações</Typography>
                             <Typography gutterBottom className='footer-text'>Desenvolvedores</Typography>
                         </Box>

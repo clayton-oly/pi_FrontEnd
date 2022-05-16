@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500&family=Teko:wght@300&display=swap');
+
 .container {
     display: flex;
     flex-direction: column;
@@ -9,7 +11,7 @@
     height: 100vh;
     width: 100vw;
     text-align: center;
-    background-color: #9ae9e9;
+    background-color: #dc9ae9;
 }
 
 .box22 {
@@ -31,6 +33,10 @@
 
 .form {
     width: 60vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .botao {
@@ -44,7 +50,19 @@
     text-decoration: none !important;
 }
 
-.texto {
+.textoTitulo {
+    font-family: 'Teko', sans-serif !important;
     padding: 20px;
     color: black !important;
+}
+
+.texto {
+    font-family: 'Barlow Semi Condensed', sans-serif !important;
+    text-align: center;
+    padding: 50px;
+    font-size: 30px !important;
+}
+
+.textos2 {
+    font-family: 'Teko', sans-serif !important;
 }
