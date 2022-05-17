@@ -84,11 +84,50 @@ img {
   }
 
   .view-produtos {
+    margin-top: 120px;
     width: 100vw;
-    margin: 100px;
+    height: 100vh;
+}
+
+.cards {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 120px;
+}
+
+.line-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.card-item {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.imagem-card {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.imagem-card figcaption h4 {
+    padding: 8px;
+}
+
+.imagem-card img {
+    width: 100%;
+    height: 100%;
+}
+
+.btnComprar {
+    background-color: #000 !important;
 }
 
 
