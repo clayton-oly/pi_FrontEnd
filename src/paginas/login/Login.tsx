@@ -4,7 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import UserLogin from '../../models/UserLogin';
 import { login } from '../../services/Service';
 import { useDispatch } from 'react-redux';
-import { addId, addToken } from "../../store/user/action";
+import { addId, addToken } from "../../store/tokens/action";
 import { toast } from 'react-toastify';
 import './Login.css'
 

@@ -12,26 +12,121 @@
     align-items: center;
 }
 
-.container-home .carousel {
-    display: flex;
-    /* overflow-x: auto;
-    scroll-behavior: smooth; */
+#items-wrapper {
+    width: 100vw;
+    height: 100vh;
 }
 
-.container-home .carousel .item .image {
-    width: 100vw;
-    min-height: 100vh;
-    background-image: url(./assets/kena-bridge-of-spirits\ 1.jpg);
+#items {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+}
+
+.item {
+    flex: none;
+    width: 100%;
+    height: 100%;
+    scroll-snap-align: start;
+    pointer-events: none;
+    display: inline-block;
     position: relative;
-    background-size: cover;
 }
 
-.view-produtos {
+.item figcaption {
+    position: absolute;
+    bottom: 80px;
+    left: 60px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 12px;
+    width: 36rem;
+    padding: 18px;
+    color: #fff;
+}
+
+.item figcaption h2 {
+    font-size: 36px;
+}
+
+.item figcaption p {
+    text-align: justify;
+    opacity: 0.8;
+}
+
+img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+/* Works on Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: blue orange;
+  }
+  
+  /* Works on Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 12px;
+    height: 8px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: #fff;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: rgb(196, 193, 193);
+    border-radius: 20px;
+  }
+
+  .view-produtos {
+    margin-top: 120px;
     width: 100vw;
-    min-height: 100vh;
+    height: 100vh;
+}
+
+.cards {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 120px;
+}
+
+.line-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.card-item {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.imagem-card {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.imagem-card figcaption h4 {
+    padding: 8px;
+}
+
+.imagem-card img {
+    width: 100%;
+    height: 100%;
+}
+
+.btnComprar {
+    background-color: #000 !important;
 }
 
 

@@ -6,7 +6,7 @@ import Categoria from '../../../models/Categoria';
 import "./DeletarCategoria.css";
 import { useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
-import { UserState } from '../../../store/user/userReducer';
+import { UserState } from '../../../store/tokens/userReducer';
 
 function DeletarCategoria() {
     let history = useNavigate();

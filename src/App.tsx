@@ -17,6 +17,7 @@ import './App.css';
 import CadastraProduto from './components/produtos/cadastrarProduto/CadastrarProduto';
 import DeletaProduto from './components/produtos/deletarProduto/DeletarProduto';
 import Navbar from './components/estaticos/navbar/Navbar';
+import Cart from './components/cart/Cart';
 
 function App() {
 
@@ -53,6 +54,8 @@ function App() {
             <Route path="/deletarProduto/:id" element={<DeletaProduto />} />
 
             <Route path="/deletarCategoria/:id" element={<DeletarCategoria />} />
+
+            <Route path="/cart" element={<Cart />} />
 
           </Routes>
         </div>
