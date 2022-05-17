@@ -71,11 +71,120 @@
     z-index: 2;
 }
 
-.box22 {
+.container-devs {
     height: 100vh;
     width: 100vw;
     text-align: center;
-    background-color: rgb(102, 100, 107);
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.nomes {
+    font-family: 'Noto Sans', sans-serif !important;
+    display: flex;
+    flex-direction: row !important;
+    justify-content: center;
+
+
+}
+
+div {
+    font-family: 'Barlow Semi Condensed', sans-serif !important;
+    justify-content: center;
+    text-align: left;
+
+}
+
+.fotosIntegrantes1 {
+    display: flex;
+    flex-direction: row !important;
+    justify-content: center;
+    align-items: left;
+
+}
+
+.fotosIntegrantes2 {
+    display: flex;
+    flex-direction: row !important;
+    justify-content: center;
+    align-items: left;
+}
+
+.alef {
+    background-image: url(./assets/Alef.jpeg);
+    width: 30vh;
+    height: 30vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 80px;
+    margin: 20px;
+}
+
+.victor {
+    background-image: url(./assets/Victor.jpeg);
+    width: 30vh;
+    height: 30vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 80px;
+    margin: 20px;
+}
+
+.viviane {
+    background-image: url(./assets/Viviane.jpeg);
+    width: 30vh;
+    height: 30vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 80px;
+    margin: 20px;
+}
+
+.alexandre {
+    background-image: url(./assets/Alexandre.jpeg);
+    width: 30vh;
+    height: 30vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 80px;
+    margin: 20px;
+
+}
+
+.beatriz {
+    background-image: url(./assets/Beatriz.jpeg);
+    width: 30vh;
+    height: 30vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 80px;
+    margin: 20px;
+
+}
+
+.clayton {
+    background-image: url(./assets/Clayton.jpeg);
+    width: 30vh;
+    height: 30vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 80px;
+    margin: 20px;
+
+
+}
+
+.jessica { 
+    background-image: url(./assets/Jessica.jpeg);
+    width: 30vh;
+    height: 30vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 80px;
+    margin: 20px;
 }
 
 .grid-form-sobre {

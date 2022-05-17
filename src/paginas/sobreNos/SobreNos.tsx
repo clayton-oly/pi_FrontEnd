@@ -29,10 +29,47 @@ function SobreNos() {
                     </div>
                 </Grid>
 
-                <Box className="box22">
+                <Grid className="container-devs">
                     <Typography variant='h2' gutterBottom color='textPrimary' component='h2' align='center' className='textoTitulo'>Integrantes</Typography>
-                    <Typography></Typography>
-                </Box>
+                    <Box className='fotosIntegrantes1'>
+                        <div>
+                            <Box className="alef"> </Box>
+                            <Typography className='nomes'>Alef Oliveira</Typography>
+                        </div>
+                        <div>
+                            <Box className="alexandre">
+                            </Box>
+                            <Typography className='nomes'>Alexandre Lima</Typography>
+                        </div>
+                        <div>
+                            <Box className="beatriz">
+                            </Box>
+                            <Typography className='nomes'>Beatriz Locatelli</Typography>
+                        </div>
+                        <div>
+                            <Box className="clayton">
+                            </Box>
+                            <Typography className='nomes'>Clayton Rocha</Typography>
+                        </div>
+                    </Box>
+                    <Box className='fotosIntegrantes2'>
+                        <div>
+                            <Box className="jessica">
+                            </Box>
+                            <Typography className='nomes'>Jessica Santos</Typography>
+                        </div>
+                        <div>
+                            <Box className="victor">
+                            </Box>
+                            <Typography className='nomes'>Victor Silva</Typography>
+                        </div>
+                        <div>
+                            <Box className="viviane">
+                            </Box>
+                            <Typography className='nomes'>Viviane Rêgo</Typography>
+                        </div>
+                    </Box>
+                </Grid>
 
                 <Grid className="grid-form-sobre">
 
@@ -49,7 +86,7 @@ function SobreNos() {
                             <form>
                                 <input id='nome' name='nome' placeholder='Insira seu nome' required />
                                 <input id='email' name='email' placeholder='Insira um email válido' required />
-                                <input id='mensagem' name='mensagem'  placeholder='Escreva sua mensagem' required />
+                                <input id='mensagem' name='mensagem' placeholder='Escreva sua mensagem' required />
                             </form>
                         </Box>
 
