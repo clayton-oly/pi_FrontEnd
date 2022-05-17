@@ -42,12 +42,12 @@ function Navbar() {
         navbarComponent =
             <AppBar className='menu-container'>
                 <Toolbar variant="dense" className='menu-toolbar'>
-                <Link to="/home" className="text-decorator-none">
-                    <Box className='cursor'>
-                        <Typography variant="h5" color="inherit" className='menu-logo'>
-                            NSG
-                        </Typography>
-                    </Box>
+                    <Link to="/home" className="text-decorator-none">
+                        <Box className='cursor'>
+                            <Typography variant="h5" color="inherit" className='menu-logo'>
+                                NSG
+                            </Typography>
+                        </Box>
                     </Link>
 
                     <Box display="flex" justifyContent="start">
@@ -90,11 +90,12 @@ function Navbar() {
                     </Box>
 
                     <Box className='nav-menu-icon'>
-                        <Box className='menu-icon-cursor' onClick={goLogout}>
-                            <ShoppingCartIcon className='nav-icon' />
-                        </Box>
-
-                        <a href="/" rel="noopener noreferrer">
+                        <Link to='/cart'>
+                            <Box className='menu-icon-cursor' >
+                                <ShoppingCartIcon className='nav-icon' />
+                            </Box>
+                        </Link>
+                        <a href="/" rel="noopener noreferrer" onClick={goLogout}>
                             <PersonIcon className='nav-icon' />
                         </a>
                     </Box>
