@@ -1,15 +1,16 @@
 import React from 'react';
-import { Box, Grid, Typography } from '@material-ui/core';
+import { Box, Button, Grid, Link, Typography } from '@material-ui/core';
 import CarouselC from '../../components/carousel/Carousel';
 
 import './Home.css';
+import Produto from '../../models/Produto';
 
 function Home() {
 
   return (
     <>
       <Grid container className='container-home'>
-        
+
         <Grid id='items-wrapper'>
           <Box id='items'>
 
@@ -40,9 +41,174 @@ function Home() {
         </Grid>
 
         <Grid className='view-produtos' xs={12}>
-          <Grid container className='grid-home'>
-            <CarouselC/>
+          <Grid className='cards'>
+            <Box className='line-cards'>
+            <Box className='card-item'>
+              <div className='imagem-card'>
+                  <img src='https://image.api.playstation.com/pr/bam-art/135/007/c090bede-e5e2-45de-8443-17e99701ab64.jpg?w=440&thumb=false' />
+                  <figcaption>
+                    <h4>Elden Ring</h4>
+                  </figcaption>
+                  <div>
+                  <Link href='/login' className="text-decorator-none">
+                    <Box mx={1}>
+                      <Button variant="contained" className="btnComprar" size='small' color="primary" >
+                        COMPRAR
+                      </Button>
+                    </Box>
+                  </Link>
+                </div>
+                </div>
+              </Box>
+              <Box className='card-item'>
+              <div className='imagem-card'>
+                  <img src='https://image.api.playstation.com/pr/bam-art/135/007/c090bede-e5e2-45de-8443-17e99701ab64.jpg?w=440&thumb=false' />
+                  <figcaption>
+                    <h4>Elden Ring</h4>
+                  </figcaption>
+                  <div>
+                  <Link href='/login' className="text-decorator-none">
+                    <Box mx={1}>
+                      <Button variant="contained" className="btnComprar" size='small' color="primary" >
+                        COMPRAR
+                      </Button>
+                    </Box>
+                  </Link>
+                </div>
+                </div>
+              </Box>
+              <Box className='card-item'>
+              <div className='imagem-card'>
+                  <img src='https://image.api.playstation.com/pr/bam-art/135/007/c090bede-e5e2-45de-8443-17e99701ab64.jpg?w=440&thumb=false' />
+                  <figcaption>
+                    <h4>Elden Ring</h4>
+                  </figcaption>
+                  <div>
+                  <Link href='/login' className="text-decorator-none">
+                    <Box mx={1}>
+                      <Button variant="contained" className="btnComprar" size='small' color="primary" >
+                        COMPRAR
+                      </Button>
+                    </Box>
+                  </Link>
+                </div>
+                </div>
+              </Box>
+              <Box className='card-item'>
+              <div className='imagem-card'>
+                  <img src='https://image.api.playstation.com/pr/bam-art/135/007/c090bede-e5e2-45de-8443-17e99701ab64.jpg?w=440&thumb=false' />
+                  <figcaption>
+                    <h4>Elden Ring</h4>
+                  </figcaption>
+                  <div>
+                  <Link href='/login' className="text-decorator-none">
+                    <Box mx={1}>
+                      <Button variant="contained" className="btnComprar" size='small' color="primary" >
+                        COMPRAR
+                      </Button>
+                    </Box>
+                  </Link>
+                </div>
+                </div>
+              </Box>
+            </Box>
+            <Box className='line-cards'>
+            <Box className='card-item'>
+              <div className='imagem-card'>
+                  <img src='https://image.api.playstation.com/pr/bam-art/135/007/c090bede-e5e2-45de-8443-17e99701ab64.jpg?w=440&thumb=false' />
+                  <figcaption>
+                    <h4>Elden Ring</h4>
+                  </figcaption>
+                  <div>
+                  <Link href='/login' className="text-decorator-none">
+                    <Box mx={1}>
+                      <Button variant="contained" className="btnComprar" size='small' color="secondary" >
+                        COMPRAR
+                      </Button>
+                    </Box>
+                  </Link>
+                </div>
+                </div>
+              </Box>
+
+              <Box className='card-item'>
+              <div className='imagem-card'>
+                  <img src='https://image.api.playstation.com/pr/bam-art/135/007/c090bede-e5e2-45de-8443-17e99701ab64.jpg?w=440&thumb=false' />
+                  <figcaption>
+                    <h4>Elden Ring</h4>
+                  </figcaption>
+                  <div>
+                  <Link href='/login' className="text-decorator-none">
+                    <Box mx={1}>
+                      <Button variant="contained" className="btnComprar" size='small' color="secondary" >
+                        COMPRAR
+                      </Button>
+                    </Box>
+                  </Link>
+                </div>
+                </div>
+              </Box>
+
+              <Box className='card-item'>
+              <div className='imagem-card'>
+                  <img src='https://image.api.playstation.com/pr/bam-art/135/007/c090bede-e5e2-45de-8443-17e99701ab64.jpg?w=440&thumb=false' />
+                  <figcaption>
+                    <h4>Elden Ring</h4>
+                  </figcaption>
+                  <div>
+                  <Link href='/login' className="text-decorator-none">
+                    <Box mx={1}>
+                      <Button variant="contained" className="btnComprar" size='small' color="secondary" >
+                        COMPRAR
+                      </Button>
+                    </Box>
+                  </Link>
+                </div>
+                </div>
+              </Box>
+
+              <Box className='card-item'>
+              <div className='imagem-card'>
+                  <img src='https://image.api.playstation.com/pr/bam-art/135/007/c090bede-e5e2-45de-8443-17e99701ab64.jpg?w=440&thumb=false' />
+                  <figcaption>
+                    <h4>Elden Ring</h4>
+                  </figcaption>
+                  <div>
+                  <Link href='/login' className="text-decorator-none">
+                    <Box mx={1}>
+                      <Button variant="contained" className="btnComprar" size='small' color="secondary" >
+                        COMPRAR
+                      </Button>
+                    </Box>
+                  </Link>
+                </div>
+                </div>
+              </Box>
+            </Box>
           </Grid>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          {/* <Grid container className='grid-home'>
+            <CarouselC/>
+          </Grid> */}
         </Grid>
 
 
