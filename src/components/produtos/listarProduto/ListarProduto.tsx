@@ -6,7 +6,7 @@ import './ListarProduto.css';
 import { useNavigate } from 'react-router-dom';
 import { busca } from '../../../services/Service';
 import { useSelector } from 'react-redux';
-import { UserState } from '../../../store/user/userReducer';
+import { UserState } from '../../../store/tokens/userReducer';
 import { toast } from 'react-toastify';
 
 

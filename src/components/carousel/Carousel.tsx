@@ -4,7 +4,7 @@ import Carousel from 'react-elastic-carousel'
 import { useSelector } from 'react-redux';
 import Produto from '../../models/Produto';
 import { busca } from '../../services/Service';
-import { UserState } from '../../store/user/userReducer';
+import { UserState } from '../../store/tokens/userReducer';
 
 import './Carousel.css'
 import Item from './Item';

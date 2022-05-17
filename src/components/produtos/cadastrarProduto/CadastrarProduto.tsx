@@ -8,7 +8,7 @@ import Categoria from '../../../models/Categoria';
 import Produto from '../../../models/Produto';
 import { busca, buscaId, post, put } from '../../../services/Service';
 import User from '../../../models/User';
-import { UserState } from '../../../store/user/userReducer';
+import { UserState } from '../../../store/tokens/userReducer';
 
 
 function CadastraProduto() {

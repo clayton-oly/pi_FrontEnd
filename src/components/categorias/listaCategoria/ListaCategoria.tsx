@@ -7,7 +7,7 @@ import { busca } from '../../../services/Service';
 import { useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
 import './ListaCategoria.css';
-import { UserState } from '../../../store/user/userReducer';
+import { UserState } from '../../../store/tokens/userReducer';
 
 function ListaCategoria() {
 

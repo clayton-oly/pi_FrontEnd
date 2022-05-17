@@ -5,7 +5,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import { Typography, Box, Grid, Link } from '@material-ui/core';
 import './Footer.css'
 import { useSelector } from 'react-redux';
-import { UserState } from '../../../store/user/userReducer';
+import { UserState } from '../../../store/tokens/userReducer';
 
 
 
