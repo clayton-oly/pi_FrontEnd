@@ -55,7 +55,7 @@ function CarouselC() {
             paddingBottom: theme.spacing(8),
         },
         card: {
-            height: '100%',
+            height: '50%',
             display: 'flex',
             flexDirection: 'column',
         },

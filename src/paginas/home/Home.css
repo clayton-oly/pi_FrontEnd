@@ -12,23 +12,80 @@
     align-items: center;
 }
 
-.container-home .carousel {
+#items-wrapper {
+    width: 100vw;
+    height: 100vh;
+}
+
+#items {
     display: flex;
-    /* overflow-x: auto;
-    scroll-behavior: smooth; */
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
 }
 
-.container-home .carousel .item .image {
-    width: 100vw;
-    min-height: 100vh;
-    background-image: url(./assets/kena-bridge-of-spirits\ 1.jpg);
+.item {
+    flex: none;
+    width: 100%;
+    height: 100%;
+    scroll-snap-align: start;
+    pointer-events: none;
+    display: inline-block;
     position: relative;
-    background-size: cover;
 }
 
-.view-produtos {
+.item figcaption {
+    position: absolute;
+    bottom: 80px;
+    left: 60px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 12px;
+    width: 36rem;
+    padding: 18px;
+    color: #fff;
+}
+
+.item figcaption h2 {
+    font-size: 36px;
+}
+
+.item figcaption p {
+    text-align: justify;
+    opacity: 0.8;
+}
+
+img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    padding: 0 8px 8px;
+}
+
+/* Works on Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: blue orange;
+  }
+  
+  /* Works on Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 12px;
+    height: 8px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: #fff;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: rgb(196, 193, 193);
+    border-radius: 20px;
+  }
+
+  .view-produtos {
     width: 100vw;
-    min-height: 100vh;
+    margin: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
