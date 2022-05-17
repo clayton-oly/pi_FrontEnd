@@ -93,22 +93,19 @@ function ListarProduto() {
             <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
               Todos os jogos
             </Typography>
-            <Typography variant="h5" align="center" color="textSecondary" paragraph>
+            {/* <Typography variant="h5" align="center" color="textSecondary" paragraph>
               Something short and leading about the collection below—its contents, the creator, etc.
               Make it short and sweet, but not too short so folks don&apos;t simply skip over it
               entirely.
-            </Typography>
+            </Typography> */}
             <div className={classes.heroButtons}>
               <Grid container spacing={2} justifyContent="center">
                 <Grid item>
-                  <Button variant="contained" color="primary">
-                    Main call to action
+                  <Link to='/formularioProduto' className='text-decorator-none'>
+                  <Button variant="outlined" color="primary" className='btnComprar'>
+                   Cadastrar jogo
                   </Button>
-                </Grid>
-                <Grid item>
-                  <Button variant="outlined" color="primary">
-                    Secondary action
-                  </Button>
+                  </Link>
                 </Grid>
               </Grid>
             </div>
@@ -130,6 +127,13 @@ function ListarProduto() {
                     </Typography>
                   </CardContent>
                   <Box display="flex" justifyContent="center" mb={1.5} >
+                  <Link to='/cart' className="text-decorator-none">
+                      <Box mx={1}>
+                        <Button variant="contained" className="btnComprar" size='small' color="primary" >
+                          Comprar
+                        </Button>
+                      </Box>
+                    </Link>
                     <Link to={`/formularioProduto/${produto.id}`} className="text-decorator-none">
                       <Box mx={1}>
                         <Button variant="contained" className="marginLeft" size='small' color="primary" >

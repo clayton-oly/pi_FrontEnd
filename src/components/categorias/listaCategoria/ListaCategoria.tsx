@@ -100,9 +100,12 @@ function ListaCategoria() {
             <div className={classes.heroButtons}>
               <Grid container spacing={2} justifyContent="center">
                 <Grid item>
-                  <Button variant="contained" color="primary">
-                    Cadastrar novo gênero
-                  </Button>
+                <Link to='/formularioCategoria' className='text-decorator-none'>
+                    <Button variant="contained" color="primary" className='btnComprar'>
+                      Cadastrar novo gênero
+                    </Button>
+                </Link>
+                  
                 </Grid>
                 {/* <Grid item>
                   <Button variant="outlined" color="primary">
