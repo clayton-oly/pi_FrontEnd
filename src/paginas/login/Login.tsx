@@ -6,6 +6,7 @@ import { login } from '../../services/Service';
 import { useDispatch } from 'react-redux';
 import { addId, addToken } from "../../store/tokens/action";
 import { toast } from 'react-toastify';
+import console from '../../assets/console.png';
 import './Login.css'
 
 function Login() {
@@ -102,7 +103,7 @@ function Login() {
                 <Box className='wrap-login'>
                     <form onSubmit={logar} className='login-form'>
                         <span className='login-form-title'>Bem Vindo!</span>
-
+                            <img src={console} alt='NSG' className='img_logo'/>
                         <span className='login-form-title'>
                           
                         </span>

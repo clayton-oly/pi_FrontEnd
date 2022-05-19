@@ -5,9 +5,7 @@ import { useSelector } from 'react-redux';
 import Produto from '../../models/Produto';
 import { busca } from '../../services/Service';
 import { UserState } from '../../store/tokens/userReducer';
-
 import './Carousel.css'
-import Item from './Item';
 
 const breakPoints = [
     { width: 1, itemsToShow: 1 },

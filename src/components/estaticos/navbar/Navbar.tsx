@@ -95,9 +95,9 @@ function Navbar() {
                                 <ShoppingCartIcon className='nav-icon' />
                             </Box>
                         </Link>
-                        <a href="/" rel="noopener noreferrer" onClick={goLogout}>
+                        <Link to="/" rel="noopener noreferrer" onClick={goLogout}>
                             <PersonIcon className='nav-icon' />
-                        </a>
+                        </Link>
                     </Box>
 
                 </Toolbar>

@@ -9,6 +9,7 @@ import useLocalStorage from 'react-use-localstorage'
 import './Cart.css'
 import { useSelector } from 'react-redux'
 import { UserState } from '../../store/tokens/userReducer';
+import { toast } from 'react-toastify'
 
 function Cart() {
 
@@ -67,7 +68,16 @@ function Cart() {
     }
 
     function confirmSales() {
-        alert("Compra Confirmada! Verifique o seu email!")
+        toast.success('Compra Confirmada! Verifique o seu email!', {
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: false,
+            theme: "colored",
+            progress: undefined,
+        });
         history("/home")
     }
 
