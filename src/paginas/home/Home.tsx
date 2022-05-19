@@ -1,8 +1,7 @@
 import React from 'react';
-import { Box, Button, Grid, Link, Typography } from '@material-ui/core';
-
+import { Link } from 'react-router-dom';
+import { Box, Button, Grid } from '@material-ui/core';
 import './Home.css';
-import Produto from '../../models/Produto';
 
 function Home() {
 
@@ -49,7 +48,7 @@ function Home() {
                     <h4>Elden Ring</h4>
                   </figcaption>
                   <div>
-                    <Link href='/login' className="text-decorator-none">
+                    <Link to='/login' className="text-decorator-none">
                       <Box mx={1}>
                         <Button variant="contained" className="btnComprar" size='small' color="primary" >
                           COMPRAR
@@ -66,7 +65,7 @@ function Home() {
                     <h4>Ghostwire: Tokyo</h4>
                   </figcaption>
                   <div>
-                    <Link href='/login' className="text-decorator-none">
+                    <Link to='/login' className="text-decorator-none">
                       <Box mx={1}>
                         <Button variant="contained" className="btnComprar" size='small' color="primary" >
                           COMPRAR
@@ -83,7 +82,7 @@ function Home() {
                     <h4>Horizon Forbidden</h4>
                   </figcaption>
                   <div>
-                    <Link href='/login' className="text-decorator-none">
+                    <Link to="/login" className="text-decorator-none">
                       <Box mx={1}>
                         <Button variant="contained" className="btnComprar" size='small' color="primary" >
                           COMPRAR
@@ -100,7 +99,7 @@ function Home() {
                     <h4>DEATHLOOP</h4>
                   </figcaption>
                   <div>
-                    <Link href='/login' className="text-decorator-none">
+                    <Link to='/login' className="text-decorator-none">
                       <Box mx={1}>
                         <Button variant="contained" className="btnComprar" size='small' color="primary" >
                           COMPRAR
@@ -119,7 +118,7 @@ function Home() {
                     <h4>Vampire: the Masquerade - Bloodhunt</h4>
                   </figcaption>
                   <div>
-                    <Link href='/login' className="text-decorator-none">
+                    <Link to='/login' className="text-decorator-none">
                       <Box mx={1}>
                         <Button variant="contained" className="btnComprar" size='small' color="secondary" >
                           COMPRAR
@@ -137,7 +136,7 @@ function Home() {
                     <h4>STRANGER OF PARADISE FINAL FANTASY ORIGIN</h4>
                   </figcaption>
                   <div>
-                    <Link href='/login' className="text-decorator-none">
+                    <Link to='/login' className="text-decorator-none">
                       <Box mx={1}>
                         <Button variant="contained" className="btnComprar" size='small' color="secondary" >
                           COMPRAR
@@ -155,7 +154,7 @@ function Home() {
                     <h4>Gotham Knights</h4>
                   </figcaption>
                   <div>
-                    <Link href='/login' className="text-decorator-none">
+                    <Link to='/login' className="text-decorator-none">
                       <Box mx={1}>
                         <Button variant="contained" className="btnComprar" size='small' color="secondary" >
                           COMPRAR
@@ -173,7 +172,7 @@ function Home() {
                     <h4>Sniper Elite 5</h4>
                   </figcaption>
                   <div>
-                    <Link href='/login' className="text-decorator-none">
+                    <Link to='/login' className="text-decorator-none">
                       <Box mx={1}>
                         <Button variant="contained" className="btnComprar" size='small' color="secondary" >
                           COMPRAR
@@ -190,8 +189,6 @@ function Home() {
             <CarouselC/>
           </Grid> */}
         </Grid>
-
-
       </Grid>
     </>
   );
