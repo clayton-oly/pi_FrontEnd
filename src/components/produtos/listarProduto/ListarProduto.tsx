@@ -11,82 +11,82 @@ import { toast } from 'react-toastify';
 
 
 function ListarProduto() {
-    
-    let navigate = useNavigate();
 
-    const [produtos, setProdutos] = useState<Produto[]>([])
-    
-    const token = useSelector<UserState, UserState["tokens"]>(
-        (state) => state.tokens
-    );
+  let navigate = useNavigate();
 
-    useEffect(() => {
-        if (token == '') {
-            toast.error('Você precisa estar logado', {
-                position: 'top-right',
-                autoClose: 2000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: false,
-                draggable: false,
-                theme: 'colored',
-                progress: undefined,
-            });
-            navigate("/login")
-        }
-    }, [token])
+  const [produtos, setProdutos] = useState<Produto[]>([])
 
+  const token = useSelector<UserState, UserState["tokens"]>(
+    (state) => state.tokens
+  );
 
-    async function getProduto() {
-        await busca("/produtos/all", setProdutos, {
-            headers: {
-                'Authorization': token
-            }
-        })
+  useEffect(() => {
+    if (token == '') {
+      toast.error('Você precisa estar logado', {
+        position: 'top-right',
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: false,
+        theme: 'colored',
+        progress: undefined,
+      });
+      navigate("/login")
     }
+  }, [token])
 
 
-    useEffect(() => {
-        getProduto()
-    }, [produtos.length])
+  async function getProduto() {
+    await busca("/produtos/all", setProdutos, {
+      headers: {
+        'Authorization': token
+      }
+    })
+  }
 
-    const useStyles = makeStyles((theme) => ({
-        icon: {
-          marginRight: theme.spacing(2),
-        },
-        heroContent: {
-          backgroundColor: theme.palette.background.paper,
-          padding: theme.spacing(8, 0, 6),
-        },
-        heroButtons: {
-          marginTop: theme.spacing(4),
-        },
-        cardGrid: {
-          paddingTop: theme.spacing(8),
-          paddingBottom: theme.spacing(8),
-        },
-        card: {
-          height: '100%',
-          display: 'flex',
-          flexDirection: 'column',
-        },
-        cardMedia: {
-          paddingTop: '56.25%', // 16:9
-        },
-        cardContent: {
-          flexGrow: 1,
-        },
-        footer: {
-          backgroundColor: theme.palette.background.paper,
-          padding: theme.spacing(6),
-        },
-      }));
 
-    const classes = useStyles();
+  useEffect(() => {
+    getProduto()
+  }, [produtos.length])
 
-    return (
-        <>
-            <main>
+  const useStyles = makeStyles((theme) => ({
+    icon: {
+      marginRight: theme.spacing(2),
+    },
+    heroContent: {
+      backgroundColor: theme.palette.background.paper,
+      padding: theme.spacing(8, 0, 6),
+    },
+    heroButtons: {
+      marginTop: theme.spacing(4),
+    },
+    cardGrid: {
+      paddingTop: theme.spacing(8),
+      paddingBottom: theme.spacing(8),
+    },
+    card: {
+      height: '100%',
+      display: 'flex',
+      flexDirection: 'column',
+    },
+    cardMedia: {
+      paddingTop: '56.25%', // 16:9
+    },
+    cardContent: {
+      flexGrow: 1,
+    },
+    footer: {
+      backgroundColor: theme.palette.background.paper,
+      padding: theme.spacing(6),
+    },
+  }));
+
+  const classes = useStyles();
+
+  return (
+    <>
+      <main>
         {/* Hero unit */}
         <div className={classes.heroContent}>
           <Container maxWidth="sm">
@@ -102,9 +102,9 @@ function ListarProduto() {
               <Grid container spacing={2} justifyContent="center">
                 <Grid item>
                   <Link to='/formularioProduto' className='text-decorator-none'>
-                  <Button variant="outlined" color="primary" className='btnComprar'>
-                   Cadastrar jogo
-                  </Button>
+                    <Button variant="outlined" color="primary" className='btnComprar'>
+                      Cadastrar jogo
+                    </Button>
                   </Link>
                 </Grid>
               </Grid>
@@ -123,11 +123,11 @@ function ListarProduto() {
                       {produto.nome}
                     </Typography>
                     <Typography>
-                    {produto.descricao}
+                      {produto.descricao}
                     </Typography>
                   </CardContent>
                   <Box display="flex" justifyContent="center" mb={1.5} >
-                  <Link to='/cart' className="text-decorator-none">
+                    <Link to={`/cart/${produto.id}`} className="text-decorator-none">
                       <Box mx={1}>
                         <Button variant="contained" className="btnComprar" size='small' color="primary" >
                           Comprar
@@ -155,8 +155,8 @@ function ListarProduto() {
           </Grid>
         </Container>
       </main>
-        </>
-    );
+    </>
+  );
 }
 
 export default ListarProduto;

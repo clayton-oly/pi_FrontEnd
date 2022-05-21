@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './paginas/home/Home';
 import Login from './paginas/login/Login';
@@ -18,7 +18,6 @@ import CadastraProduto from './components/produtos/cadastrarProduto/CadastrarPro
 import DeletaProduto from './components/produtos/deletarProduto/DeletarProduto';
 import Navbar from './components/estaticos/navbar/Navbar';
 import Cart from './components/cart/Cart';
-
 function App() {
 
   
@@ -55,7 +54,7 @@ function App() {
 
             <Route path="/deletarCategoria/:id" element={<DeletarCategoria />} />
 
-            <Route path="/cart" element={<Cart />} />
+            <Route path="/cart/:id" element={<Cart />} />
 
           </Routes>
         </div>

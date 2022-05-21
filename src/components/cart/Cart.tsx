@@ -24,39 +24,51 @@ function Cart() {
     const [quantidadeFinal, setQuantidadeFinal] = useState(0)
 
     const [produto, setProduto] = useState<Produto>({
+
         id: 0,
         nome: '',
         descricao: '',
-        preco: 399.50,
+        preco: 0,
         tipo: '',
         classInd: '',
         console: '',
-        foto: 'https://image.api.playstation.com/pr/bam-art/128/259/a7b40966-3908-48a3-8e9a-d881265eca3f.jpg',
+        foto: '',
         dataProduto: '',
         categoria: null,
         usuario: null
     })
 
+
     useEffect(() => {
-        if (token === "") {
-            alert("VocÃª precisa estar logado")
+        if (token == "") {
+            toast.error('Você precisa estar logado', {
+                position: 'top-right',
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: 'colored',
+                progress: undefined,
+            });
             history("/login")
+
         }
     }, [token])
 
-    // useEffect(() => {
-    //     if (id !== undefined) {
-    //         findByIdPostagem(id)
-    //     }
-    // }, [id])
+    useEffect(() => {
+        if (id !== undefined) {
+            findByIdProduto(id)
+        }
+    }, [id])
 
-    // async function findByIdPostagem(id: string) {
-    //     await buscaId(`postagens/${id}`, setProduto, {
-    //         headers: {
-    //             'Authorization': token
-    //         }
-    //     })
-    // }
+    async function findByIdProduto(id: string) {
+        await buscaId(`/produtos/${id}`, setProduto, {
+            headers: {
+                'Authorization': token
+            }
+        })
+    }
 
     function handleChange(e: ChangeEvent<HTMLInputElement>) {
         let valor = +e.target.value
@@ -83,7 +95,7 @@ function Cart() {
 
     return (
         <>
-            <Box m={2} className='cart'>  
+            <Box m={2} className='cart'>
                 <Card variant="outlined" className='cardContainer'>
 
                     <div className='cardProduct'>
