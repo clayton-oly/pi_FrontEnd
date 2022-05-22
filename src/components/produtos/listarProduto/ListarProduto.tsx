@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { Box, Card, CardActions, CardContent, Button, Typography, makeStyles, Grid, Container } from '@material-ui/core';
+import { Box, Card, CardContent, Button, Typography, makeStyles, Grid, Container } from '@material-ui/core';
 import Produto from '../../../models/Produto';
 import './ListarProduto.css';
 import { useNavigate } from 'react-router-dom';
@@ -117,13 +117,13 @@ function ListarProduto() {
             {produtos.map((produto) => (
               <Grid item key={produto.id} xs={12} sm={6} md={4}>
                 <Card className={classes.card}>
-                  <img src={produto.foto} />
+                  <img src={produto.foto} alt="imagem do jogo" />
                   <CardContent className={classes.cardContent}>
                     <Typography gutterBottom variant="h5" component="h2">
                       {produto.nome}
                     </Typography>
                     <Typography>
-                      {produto.descricao}
+                      R${produto.preco}
                     </Typography>
                   </CardContent>
                   <Box display="flex" justifyContent="center" mb={1.5} >

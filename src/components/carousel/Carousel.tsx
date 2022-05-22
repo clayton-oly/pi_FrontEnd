@@ -17,7 +17,6 @@ const breakPoints = [
 
 function CarouselC() {
     const [produtos, setProdutos] = useState<Produto[]>([])
-    const [items] = useState([1, 2, 3, 4, 5, 6, 7, 8]);
     const token = useSelector<UserState, UserState["tokens"]>(
         (state) => state.tokens
     );
@@ -77,7 +76,7 @@ function CarouselC() {
                 produtos.map(produto => (
                     <Grid item key={produto.id} xs={12} sm={6} md={4}>
                         <Card className={classes.card}>
-                            <img src={produto.foto} />
+                            <img src={produto.foto} alt='foto produto' />
                             <CardContent className={classes.cardContent}>
                                 <Typography gutterBottom variant="h5" component="h2">
                                     {produto.nome}

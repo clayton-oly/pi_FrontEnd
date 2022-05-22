@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { Box, Card, CardActions, CardContent, Button, Typography, Grid, Container, CardMedia, makeStyles } from '@material-ui/core';
+import { Box, Card, CardContent, Button, Typography, Grid, Container, makeStyles } from '@material-ui/core';
 import Categoria from '../../../models/Categoria';
 import { useNavigate } from 'react-router-dom';
 import { busca } from '../../../services/Service';

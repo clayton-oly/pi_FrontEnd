@@ -1,11 +1,8 @@
 import React, { useEffect, useState, ChangeEvent } from 'react'
 import { Box, Button, Card, TextField, Typography } from '@material-ui/core'
 import { Link, useNavigate, useParams } from 'react-router-dom'
-
 import Produto from '../../models/Produto'
 import { buscaId } from '../../services/Service'
-import useLocalStorage from 'react-use-localstorage'
-
 import './Cart.css'
 import { useSelector } from 'react-redux'
 import { UserState } from '../../store/tokens/userReducer';
@@ -103,7 +100,7 @@ function Cart() {
 
                         <div className='cardProductInfo'>
                             <Typography color="textSecondary" gutterBottom>
-                                Postagens
+                                Jogo
                             </Typography>
 
                             <Typography variant="h5" component="h2">

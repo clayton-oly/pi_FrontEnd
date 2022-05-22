@@ -1,5 +1,5 @@
 import React, { ChangeEvent, useEffect, useState } from 'react'
-import { Grid, Box, Typography, TextField, Button, Select, InputLabel, MenuItem, FormControl, FormHelperText } from "@material-ui/core"
+import { Grid, Box, Typography, Button, Select, InputLabel, MenuItem, FormControl, FormHelperText } from "@material-ui/core"
 import './CadastrarProduto.css';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
@@ -9,7 +9,6 @@ import Produto from '../../../models/Produto';
 import { busca, buscaId, post, put } from '../../../services/Service';
 import User from '../../../models/User';
 import { UserState } from '../../../store/tokens/userReducer';
-
 
 function CadastraProduto() {
 
@@ -48,7 +47,7 @@ function CadastraProduto() {
         id: 0,
         nome: '',
         descricao: '',
-        preco: 0,
+        preco:0,
         tipo: '',
         classInd: '',
         console: '',
