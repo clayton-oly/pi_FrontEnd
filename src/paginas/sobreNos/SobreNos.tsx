@@ -36,7 +36,7 @@ function SobreNos() {
                          <h2>Integrantes</h2>
                     </div>
                     <Box className='fotosIntegrantes1'>
-                        <div>
+                        <div className='links-devs'>
                             <Box className="alef"> </Box>
                             <Typography className='nomes'><h3>Alef Oliveira</h3></Typography>
                             <Box className='redes'>
@@ -50,7 +50,7 @@ function SobreNos() {
                                 </Box>
                             
                         </div>
-                        <div>
+                        <div className='links-devs'>
                             <Box className="alexandre">
                             </Box>
                             <Typography className='nomes'><h3>Alexandre Lima</h3></Typography>
@@ -64,7 +64,7 @@ function SobreNos() {
                                     </a>
                                 </Box>
                         </div>
-                        <div>
+                        <div className='links-devs'>
                             <Box className="beatriz">
                             </Box>
                             <Typography className='nomes'><h3>Beatriz Locatelli</h3></Typography>
@@ -79,7 +79,7 @@ function SobreNos() {
                                 </Box>
                                 
                         </div>
-                        <div>
+                        <div className='links-devs'>
                             <Box className="clayton">
                             </Box>
                             <Typography className='nomes'><h3>Clayton Rocha</h3></Typography>
@@ -95,7 +95,7 @@ function SobreNos() {
                         </div>
                     </Box>
                     <Box className='fotosIntegrantes2'>
-                        <div>
+                        <div className='links-devs'>
                             <Box className="jessica">
                             </Box>
                             <Typography className='nomes'><h3>Jessica Santos</h3></Typography>
@@ -109,7 +109,7 @@ function SobreNos() {
                                     </a>
                                 </Box>
                         </div>
-                        <div>
+                        <div className='links-devs'>
                             <Box className="victor">
                             </Box>
                             <Typography className='nomes'><h3>Victor Silva</h3></Typography>
@@ -123,7 +123,7 @@ function SobreNos() {
                                     </a>
                                 </Box>
                         </div>
-                        <div>
+                        <div className='links-devs'>
                             <Box className="viviane">
                             </Box>
                             <Typography className='nomes'><h3>Viviane Rêgo</h3></Typography>

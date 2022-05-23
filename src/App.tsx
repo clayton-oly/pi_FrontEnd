@@ -18,9 +18,9 @@ import CadastraProduto from './components/produtos/cadastrarProduto/CadastrarPro
 import DeletaProduto from './components/produtos/deletarProduto/DeletarProduto';
 import Navbar from './components/estaticos/navbar/Navbar';
 import Cart from './components/cart/Cart';
+
 function App() {
 
-  
   return (
     <Provider store={store}>
       <ToastContainer />
@@ -28,6 +28,7 @@ function App() {
         <Navbar />
         <div style={{ minHeight: '100vh' }}>
           <Routes>
+           
             <Route path="/" element={<Home  />} />
 
             <Route path="/home" element={<Home />} />
