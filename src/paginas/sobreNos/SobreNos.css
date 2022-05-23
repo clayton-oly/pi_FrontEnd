@@ -13,6 +13,8 @@
     min-height: 100vh;
     /* justify-content: center;
     align-items: center !important; */
+    
+    
 }
 
 .container-sobre-one {
@@ -41,60 +43,70 @@
     font-weight: 400;
     font-size: 50px;
     text-transform: uppercase;
+    text-align: right;
+    color: white !important; text-shadow: black 0.3em 0.3em 0.3em;
 }
 
 .texto-sobre p {
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Righteous', sans-serif;
     font-weight: 300;
     font-size: 20px;
     text-align: justify;
     background-color: rgba(0, 0, 0, 0.7);
     padding: 10px 22px;
+    
 }
 
 .background-sobre {
-    background-image: url(./assets/modern-office-space-interior.jpg);
+    background-image: url(./assets/jogos-e-competicoes-para-equipe-de-vendas.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    position: relative;
+    *position: relative;
     display: inline-block;
     /* opacity: 0.5; */
     z-index: 1;
 }
 
-.mask-background-sobre {
-    background-color: rgba(0, 0, 0, 0.8);
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-}
+
 
 .container-devs {
     height: 100vh;
     width: 100vw;
-    text-align: center;
-    background-color: rgb(255, 255, 255);
+    background: -webkit-linear-gradient(to right,#532cad,#8a4dc4);
+    background: -o-linear-gradient(to right, #532cad, #8a4dc4);
+    background: -moz-linear-gradient(to right,#532cad, #8a4dc4);
+    background: linear-gradient(to right,#532cad,#8a4dc4);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
+       
+}
+
+.tituloIntegrantes {
+    font-family: 'Righteous', sans-serif;
+    font-size: 35px;
+    text-transform: uppercase;
+    color: white !important; text-shadow: black 0.3em 0.3em 0.3em;
+    margin-top: 12%;
+    text-align: center;
 }
 
 .nomes {
-    font-family: 'Noto Sans', sans-serif !important;
+    font-family: 'Righteous', sans-serif;
     display: flex;
     flex-direction: row !important;
     justify-content: center;
-
+    color: white !important; text-shadow: black 0.3em 0.3em 0.3em;
 
 }
 
 div {
-    font-family: 'Barlow Semi Condensed', sans-serif !important;
+    font-family: 'Righteous', sans-serif;
     justify-content: center;
-    text-align: left;
+    text-align: center;
 
 }
 
@@ -103,7 +115,7 @@ div {
     flex-direction: row !important;
     justify-content: center;
     align-items: left;
-
+    margin-top: 2%;
 }
 
 .fotosIntegrantes2 {
@@ -111,6 +123,7 @@ div {
     flex-direction: row !important;
     justify-content: center;
     align-items: left;
+    padding-bottom: 2%;
 }
 
 .alef {
@@ -121,6 +134,8 @@ div {
     background-size: cover;
     border-radius: 80px;
     margin: 20px;
+    box-shadow: 5px 5px 5px black;
+    
 }
 
 .victor {
@@ -131,6 +146,8 @@ div {
     background-size: cover;
     border-radius: 80px;
     margin: 20px;
+    box-shadow: 5px 5px 5px black;
+    
 }
 
 .viviane {
@@ -141,6 +158,7 @@ div {
     background-size: cover;
     border-radius: 80px;
     margin: 20px;
+    box-shadow: 5px 5px 5px black;
 }
 
 .alexandre {
@@ -151,6 +169,7 @@ div {
     background-size: cover;
     border-radius: 80px;
     margin: 20px;
+    box-shadow: 5px 5px 5px black;
 
 }
 
@@ -162,6 +181,7 @@ div {
     background-size: cover;
     border-radius: 80px;
     margin: 20px;
+    box-shadow: 5px 5px 5px black;
 
 }
 
@@ -173,8 +193,8 @@ div {
     background-size: cover;
     border-radius: 80px;
     margin: 20px;
-
-
+    box-shadow: 5px 5px 5px black;
+    
 }
 
 .jessica { 
@@ -185,14 +205,42 @@ div {
     background-size: cover;
     border-radius: 80px;
     margin: 20px;
+    box-shadow: 5px 5px 5px black;
+    
 }
 
+.redes1 {
+    align-items:center;
+    justify-content: center;
+    display: flex;
+    font-size: 50px !important;
+    color: white !important; 
+    border-radius: 80px;
+    box-shadow: 5px 5px 5px black;
+}
+
+.redes2 {
+    align-items:center;
+    justify-content: center;
+    display: flex;
+    font-size: 50px !important;
+    color: white !important; 
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px black;
+}
+    
+
 .grid-form-sobre {
+    background: -webkit-linear-gradient(to right,#532cad,#8a4dc4);
+    background: -o-linear-gradient(to right, #532cad, #8a4dc4);
+    background: -moz-linear-gradient(to right,#532cad, #8a4dc4);
+    background: linear-gradient(to right,#532cad,#8a4dc4);
     display: flex;
     justify-content: center;
     text-align: center;
     height: 100vh;
     width: 100vw;
+    
 }
 
 /* .container-left-box-sobre-form {
@@ -211,8 +259,13 @@ div {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 5px;
     width: 50%;
+    height: 60%;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    margin-top: 10%;
+
+    
 }
 
 .box-sobre-form form {
@@ -222,20 +275,19 @@ div {
 }
 
 .box-sobre-form form input {
-    width: 340px;
-    height: 40px;
-    border: 1px solid rgba(0, 0, 0, 0.5);
+    width: 500px;
+    height: 45px;
+    border: 2px solid rgba(0, 0, 0, 0.5);
     border-radius: 6px;
     padding: 8px;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Righteous', sans-serif;
+    
 }
 
 .botao {
-    font-family: 'Noto Sans', sans-serif !important;
-    background: -webkit-linear-gradient(to left, #21d4fd, #b721ff);
-    background: -o-linear-gradient(to left, #21d4fd, #b721ff);
-    background: -moz-linear-gradient(to left, #21d4fd, #b721ff);
-    background: linear-gradient(to left, #21d4fd, #b721ff);
+    font-family: 'Righteous', sans-serif!important;
+    background-color: rgb(223, 19, 104) !important;
+    box-shadow: 5px 5px 5px black;
 }
 
 .text-decorator-none {
@@ -243,7 +295,10 @@ div {
 }
 
 .box-sobre-form-titulo {
-    font-family: 'Noto Sans', sans-serif;
+    color: white !important; text-shadow: black 0.3em 0.3em 0.3em;
+    font-family: 'Righteous', sans-serif;
+    font-size: 20px;
+  
 }
 
 /* .texto {
