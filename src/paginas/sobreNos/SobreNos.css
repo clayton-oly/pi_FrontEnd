@@ -13,8 +13,6 @@
     min-height: 100vh;
     /* justify-content: center;
     align-items: center !important; */
-    
-    
 }
 
 .container-sobre-one {
@@ -67,8 +65,6 @@
     /* opacity: 0.5; */
     z-index: 1;
 }
-
-
 
 .container-devs {
     height: 100vh;
@@ -264,8 +260,6 @@
     height: 60%;
     border: 1px solid rgba(0, 0, 0, 0.5);
     margin-top: 10%;
-
-    
 }
 
 .box-sobre-form form {
@@ -281,7 +275,6 @@
     border-radius: 6px;
     padding: 8px;
     font-family: 'Righteous', sans-serif;
-    
 }
 
 .botao {
@@ -298,7 +291,6 @@
     color: white !important; text-shadow: black 0.3em 0.3em 0.3em;
     font-family: 'Righteous', sans-serif;
     font-size: 20px;
-  
 }
 
 /* .texto {
