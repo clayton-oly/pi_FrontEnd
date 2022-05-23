@@ -66,20 +66,20 @@ function Navbar() {
                                 </Typography>
                             </Box>
                         </Link>
-                        <Link to="/formularioCategoria" className="text-decorator-none">
+                        {/* <Link to="/formularioCategoria" className="text-decorator-none">
                             <Box mx={1} className='cursor'>
                                 <Typography variant="h6" color="inherit" className='menu-text'>
                                     Cadastrar gênero
                                 </Typography>
                             </Box>
-                        </Link>
-                        <Link to="/formularioProduto" className="text-decorator-none">
+                        </Link> */}
+                        {/* <Link to="/formularioProduto" className="text-decorator-none">
                             <Box mx={1} className='cursor'>
                                 <Typography variant="h6" color="inherit" className='menu-text'>
                                     Cadastrar produto
                                 </Typography>
                             </Box>
-                        </Link>
+                        </Link> */}
                         <Link to="/sobrenos" className="text-decorator-none">
                             <Box mx={1} className='cursor'>
                                 <Typography variant="h6" color="inherit" className='menu-text'>
