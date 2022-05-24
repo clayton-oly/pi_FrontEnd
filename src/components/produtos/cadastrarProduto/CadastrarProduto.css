@@ -1,31 +1,61 @@
-.container-cad-produto {
+.container-produto {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
+}
+
+.container-cad-produto {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.container-cad-produto-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .container-cad-produto-form {
     display: flex;
-    flex-direction: row;
-    width: 100vw;
-    gap: 40px;
+    flex-direction: column;
+    width: 100%;
 }
 
-.box-cad-produto-text {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50%;
-}
-
-.box-cad-produto-form {
+.produto-form-box {
     display: flex;
     flex-direction: row;
-    width: 50%;
+    gap: 10px;
 }
 
-.box-cad-produto-form .btnFinalizar {
+.wrap-input {
+    width: 100% !important;
+    position: relative !important;
+    border-bottom: 2px solid #adadad !important;
+    margin-bottom: 37px !important;
+  }
+
+.wrap-input input {
+    font-size: 15px !important;
+    color: #000 !important;
+    line-height: 1.2 !important;
+    border: none !important;
+    display: block !important;
+    width: 100% !important;
+    height: 45px !important;
+    background-color: transparent !important;
+    padding: 0 5px !important;
+    font-family: Nunito, sans-serif !important;
+  }
+
+.form-control-text {
+    font-family: Nunito, sans-serif !important;
+  }
+
+.form-control-text .btnFinalizar {
+    font-family: Nunito, sans-serif !important;
     background-color: rgb(223, 19, 104);
 }

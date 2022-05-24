@@ -1,13 +1,13 @@
 import React, { ChangeEvent, useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { buscaId, post, put } from '../../../service/Service';
+import { buscaId, post, put } from '../../../services/Service';
 import Categoria from '../../../models/Categoria';
 import { useSelector } from 'react-redux';
 
 import { toast } from 'react-toastify';
 import './CadastroCategoria.css';
-import { Button, Container, TextField, Typography } from '@mui/material';
-import { UserState } from '../../../store/user/userReducer';
+import { Button, TextField, Typography } from '@mui/material';
+import { UserState } from '../../../store/tokens/userReducer';
 import { Grid, Box } from '@material-ui/core';
 
 function CadastroCategoria() {

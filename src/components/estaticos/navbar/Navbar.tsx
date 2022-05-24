@@ -5,9 +5,9 @@ import { useNavigate } from 'react-router-dom'
 import './Navbar.css'
 import { useSelector } from 'react-redux';
 import { useDispatch } from "react-redux";
-import { addToken } from '../../../store/user/actions';
+import { addToken } from '../../../store/tokens/action';
 import { toast } from 'react-toastify';
-import { UserState } from '../../../store/user/userReducer';
+import { UserState } from '../../../store/tokens/userReducer';
 import PersonIcon from '@mui/icons-material/Person';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
@@ -42,12 +42,12 @@ function Navbar() {
         navbarComponent =
             <AppBar className='menu-container'>
                 <Toolbar variant="dense" className='menu-toolbar'>
-                <Link to="/home" className="text-decorator-none">
-                    <Box className='cursor'>
-                        <Typography variant="h5" color="inherit" className='menu-logo'>
-                            NSG
-                        </Typography>
-                    </Box>
+                    <Link to="/home" className="text-decorator-none">
+                        <Box className='cursor'>
+                            <Typography variant="h5" color="inherit" className='menu-logo'>
+                                NSG
+                            </Typography>
+                        </Box>
                     </Link>
 
                     <Box display="flex" justifyContent="start">
@@ -66,30 +66,38 @@ function Navbar() {
                                 </Typography>
                             </Box>
                         </Link>
-                        <Link to="/formularioCategoria" className="text-decorator-none">
+                        {/* <Link to="/formularioCategoria" className="text-decorator-none">
                             <Box mx={1} className='cursor'>
                                 <Typography variant="h6" color="inherit" className='menu-text'>
                                     Cadastrar gênero
                                 </Typography>
                             </Box>
-                        </Link>
-                        <Link to="/formularioProduto" className="text-decorator-none">
+                        </Link> */}
+                        {/* <Link to="/formularioProduto" className="text-decorator-none">
                             <Box mx={1} className='cursor'>
                                 <Typography variant="h6" color="inherit" className='menu-text'>
                                     Cadastrar produto
+                                </Typography>
+                            </Box>
+                        </Link> */}
+                        <Link to="/sobrenos" className="text-decorator-none">
+                            <Box mx={1} className='cursor'>
+                                <Typography variant="h6" color="inherit" className='menu-text'>
+                                    Quem Somos
                                 </Typography>
                             </Box>
                         </Link>
                     </Box>
 
                     <Box className='nav-menu-icon'>
-                        <Box className='menu-icon-cursor' onClick={goLogout}>
-                            <ShoppingCartIcon className='nav-icon' />
-                        </Box>
-
-                        <a href="/" rel="noopener noreferrer">
+                        <Link to='/cart'>
+                            <Box className='menu-icon-cursor' >
+                                <ShoppingCartIcon className='nav-icon' />
+                            </Box>
+                        </Link>
+                        <Link to="/" rel="noopener noreferrer" onClick={goLogout}>
                             <PersonIcon className='nav-icon' />
-                        </a>
+                        </Link>
                     </Box>
 
                 </Toolbar>

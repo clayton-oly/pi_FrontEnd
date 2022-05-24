@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { Box, Button, Card, CardActions, CardContent, Typography } from '@material-ui/core';
 import { useNavigate, useParams } from 'react-router-dom';
-import { buscaId, deleteId } from '../../../service/Service';
+import { buscaId, deleteId } from '../../../services/Service';
 import Categoria from '../../../models/Categoria';
 import "./DeletarCategoria.css";
 import { useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
-import { UserState } from '../../../store/user/userReducer';
+import { UserState } from '../../../store/tokens/userReducer';
 
 function DeletarCategoria() {
     let history = useNavigate();

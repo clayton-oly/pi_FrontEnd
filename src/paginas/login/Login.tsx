@@ -2,11 +2,11 @@ import React, { ChangeEvent, useEffect, useState } from 'react';
 import { Box, Grid, Typography } from '@material-ui/core';
 import { Link, useNavigate } from 'react-router-dom';
 import UserLogin from '../../models/UserLogin';
-import { login } from '../../service/Service';
-import console from '../../assets/console.png';
+import { login } from '../../services/Service';
 import { useDispatch } from 'react-redux';
-import { addId, addToken } from "../../store/user/actions";
+import { addId, addToken } from "../../store/tokens/action";
 import { toast } from 'react-toastify';
+import console from '../../assets/console.png';
 import './Login.css'
 
 function Login() {
@@ -16,7 +16,7 @@ function Login() {
 
     const dispatch = useDispatch();
 
-    // Hooks que vão manipular o nosso Local Storage para gravar o Token
+    // Hooks que vão manipular e para gravar o Token
     const [token, setToken] = useState('');
 
     // useState define como uma determinada variavel será inicializada quando o Comp. for renderizado
@@ -39,12 +39,25 @@ function Login() {
         foto: ""
     })
 
-     // Hook de efeito colateral, sempre executa uma função quando o que estiver no seu Array é alterado
-     useEffect(() => {
+    useEffect(() => {
+        if (token !== "") {
+            dispatch(addToken(token))
+            history('/home')
+        }
+    }, [token])
+
+    function updatedModel(e: ChangeEvent<HTMLInputElement>) {
+        setUserLogin({
+            ...userLogin,
+            [e.target.name]: e.target.value           
+        })
+    }
+
+    useEffect(() => {
         if (respUserLogin.token !== "") {
 
             // Verifica os dados pelo console (Opcional)
-            //console.log("Token: " + respUserLogin.token)
+           // console.log("Token: " + respUserLogin.token)
            // console.log("ID: " + respUserLogin.id)
 
             // Guarda as informações dentro do Redux (Store)
@@ -54,18 +67,11 @@ function Login() {
         }
     }, [respUserLogin.token])
 
-
-    // Função que junto com a setUserLogin irá atualizar o valor inicial da userLogin
-    function updatedModel(e: ChangeEvent<HTMLInputElement>) {
-        setUserLogin({
-            ...userLogin,
-            [e.target.name]: e.target.value
-        })
-    }
-
     async function logar(e: ChangeEvent<HTMLFormElement>) {
         e.preventDefault();
         try {
+            /* Se atente para a Rota de Logar, e também substitua o método
+            setToken por setRespUserLogin */
             await login(`/usuarios/logar`, userLogin, setRespUserLogin)
             toast.success('Usuário logado com sucesso!', {
                 position: "top-right",
@@ -97,9 +103,9 @@ function Login() {
                 <Box className='wrap-login'>
                     <form onSubmit={logar} className='login-form'>
                         <span className='login-form-title'>Bem Vindo!</span>
-
+                            <img src={console} alt='NSG' className='img_logo'/>
                         <span className='login-form-title'>
-                            <img src={console} alt='NSG' />
+                          
                         </span>
 
                         <Box className='wrap-input'>
