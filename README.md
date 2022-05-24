@@ -1,46 +1,31 @@
-# Getting Started with Create React App
+# TheNextStepGame!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+SOBRE A NSG
+A The Next Step Game é uma empresa desenvolvida por sete jovens que buscam renovar a qualidade do meio ambiente através de um e-commerce, nosso foco é reutilizar e eliminar quaisquer mídia física que venha afetar nosso ecossistema.
 
-## Available Scripts
+Através da nossa plataforma digital, os usuários têm a opção de comprar e vender jogos tangíveis para diversos tipos de consoles, cada usuário que realocar uma mídia física vai receber um desconto proporcional para que o mesmo seja incentivado a tal ação.
 
-In the project directory, you can run:
+Além de beneficiar o meio ambiente a NSG junto aos seus desenvolvedores, vai destinar o lucro para realização de eventos para crianças e jovens carentes, onde damos a possibilidade de conhecerem um pouco mais sobre o mundo digital, disponibilizando diversão e conhecimento.
 
-### `npm start`
+# Ferramentas back-end!
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Java
+- MySQL
+- SpringBoot
+- Heroku
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+# Ferramentas front-end!
 
-### `npm test`
+- React
+- Material UI
+- Netlify
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Integrantes!
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Alef Oliveira
+- Alexandre Lima
+- Beatriz Locatelli
+- Clayton Rocha
+- Jessica Santos
+- Victor Silva
+- Viviane Rêgo
