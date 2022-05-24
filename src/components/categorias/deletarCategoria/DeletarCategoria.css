@@ -1,0 +1,16 @@
+.box-deletar-categoria {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 200px;
+ }
+
+.text-deletar {
+   font-family: Nunito, sans-serif !important;
+   font-size: 26px !important;
+}
+
+.btnPreto {
+    background-color: #000 !important;
+    color: #fff !important;
+}

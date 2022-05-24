@@ -117,10 +117,10 @@ function Home() {
                       R${produto.preco}
                     </Typography>
                   </CardContent>
-                  <Box display="flex" justifyContent="center" mb={1.5} >
+                  <Box display="flex" mb={1.5} >
                     <Link to={`/cart/${produto.id}`} className="text-decorator-none">
                       <Box mx={1}>
-                        <Button variant="contained" className="btnComprar" size='small' color="primary" >
+                        <Button variant="contained" className="btnAzul" size='small' color="primary" >
                           Comprar
                         </Button>
                       </Box>

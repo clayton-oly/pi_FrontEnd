@@ -90,15 +90,15 @@ function DeletarCategoria() {
 
     return (
         <>
-            <Box m={2}>
-                <Card variant="outlined">
+            <Box m={2} className='box-deletar-categoria'>
+                <Card variant="outlined" >
                     <CardContent>
                         <Box justifyContent="center">
-                            <Typography color="textSecondary" gutterBottom>
+                            <Typography gutterBottom className='text-deletar'>
                                 Deseja deletar a Categoria:
                             </Typography>
-                            <Typography color="textSecondary">
-                                { categoria?.descricao }
+                            <Typography className='text-deletar'>
+                                { categoria?.genero }
                             </Typography>
                         </Box>
                     </CardContent>
@@ -106,12 +106,12 @@ function DeletarCategoria() {
                     <CardActions>
                         <Box display="flex" justifyContent="start" ml={1.0} mb={2} >
                             <Box mx={2}>
-                                <Button onClick={sim} variant="contained" className="marginLeft" size='large' color="secondary">
+                                <Button onClick={sim} variant="contained" className="marginLeft btnRoxo" size='large' color="secondary">
                                     Sim
                                 </Button>
                             </Box>
                             <Box mx={2}>
-                                <Button onClick={nao} variant="contained" size='large' color="secondary">
+                                <Button onClick={nao} variant="contained" size='large' className='btnPreto'>
                                     Não
                                 </Button>
                             </Box>

@@ -137,7 +137,7 @@ function Login() {
                         <Box className="text-center">
                             <span className="txt1">Nao possui conta?</span>
 
-                            <Link to='/cadastro'>
+                            <Link to='/cadastro' className='text-decorator-none'>
                                 <Typography variant='subtitle1' gutterBottom align='center' className='txt2'>Cadastre-se</Typography>
                             </Link>
                         </Box>

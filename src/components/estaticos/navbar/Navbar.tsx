@@ -62,7 +62,7 @@ function Navbar() {
                         <Link to="/categorias" className="text-decorator-none">
                             <Box mx={1} className='cursor'>
                                 <Typography variant="h6" color="inherit" className='menu-text'>
-                                    Gênero
+                                    Gêneros
                                 </Typography>
                             </Box>
                         </Link>
