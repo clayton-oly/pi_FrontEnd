@@ -66,24 +66,24 @@
 * {
     scrollbar-width: thin;
     scrollbar-color: blue orange;
-}
-
-/* Works on Chrome, Edge, and Safari */
-*::-webkit-scrollbar {
+  }
+  
+  /* Works on Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
     width: 12px;
     height: 8px;
-}
-
-*::-webkit-scrollbar-track {
+  }
+  
+  *::-webkit-scrollbar-track {
     background: #fff;
-}
-
-*::-webkit-scrollbar-thumb {
+  }
+  
+  *::-webkit-scrollbar-thumb {
     background-color: rgb(196, 193, 193);
     border-radius: 20px;
-}
+  }
 
-.view-produtos {
+  .view-produtos {
     margin-top: 120px;
     width: 100vw;
     height: 100vh;
@@ -126,6 +126,3 @@
     height: 100%;
 }
 
-.btnComprar {
-    background-color: #650dd0 !important;
-}

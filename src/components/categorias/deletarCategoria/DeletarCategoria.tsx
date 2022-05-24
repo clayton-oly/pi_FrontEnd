@@ -3,10 +3,10 @@ import { Box, Button, Card, CardActions, CardContent, Typography } from '@materi
 import { useNavigate, useParams } from 'react-router-dom';
 import { buscaId, deleteId } from '../../../services/Service';
 import Categoria from '../../../models/Categoria';
-import "./DeletarCategoria.css";
 import { useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
 import { UserState } from '../../../store/tokens/userReducer';
+import "./DeletarCategoria.css";
 
 function DeletarCategoria() {
     let history = useNavigate();
@@ -58,7 +58,7 @@ function DeletarCategoria() {
                 }
             });
             
-            toast.success('Categoria deletada com sucesso!', {
+            toast.success('Gênero deletado com sucesso!', {
                 position: "top-right",
                 autoClose: 2000,
                 hideProgressBar: false,
@@ -90,15 +90,15 @@ function DeletarCategoria() {
 
     return (
         <>
-            <Box m={2}>
-                <Card variant="outlined">
+            <Box m={2} className='box-deletar-categoria'>
+                <Card variant="outlined" >
                     <CardContent>
                         <Box justifyContent="center">
-                            <Typography color="textSecondary" gutterBottom>
-                                Deseja deletar a Categoria:
+                            <Typography gutterBottom className='text-deletar'>
+                                Deseja deletar o Gênero:
                             </Typography>
-                            <Typography color="textSecondary">
-                                { categoria?.descricao }
+                            <Typography className='text-deletar'>
+                                { categoria?.genero }
                             </Typography>
                         </Box>
                     </CardContent>
@@ -106,12 +106,12 @@ function DeletarCategoria() {
                     <CardActions>
                         <Box display="flex" justifyContent="start" ml={1.0} mb={2} >
                             <Box mx={2}>
-                                <Button onClick={sim} variant="contained" className="marginLeft" size='large' color="secondary">
+                                <Button onClick={sim} variant="contained" className="marginLeft btnRoxo" size='large' color="secondary">
                                     Sim
                                 </Button>
                             </Box>
                             <Box mx={2}>
-                                <Button onClick={nao} variant="contained" size='large' color="secondary">
+                                <Button onClick={nao} variant="contained" size='large' className='btnPreto'>
                                     Não
                                 </Button>
                             </Box>

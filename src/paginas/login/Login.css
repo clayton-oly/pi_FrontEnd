@@ -61,6 +61,7 @@ body, html {
   position: relative !important;
   border-bottom: 2px solid #adadad !important;
   margin-bottom: 37px !important;
+  text-align: left !important;
 }
 
 .input {
@@ -201,4 +202,17 @@ body, html {
   text-align: center !important;
   width: 30% !important;
   padding-bottom: 5px;
+}
+
+.link-home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-link-home {
+  font-family: 'Nunito', sans-serif !important;
+  font-size: 12px !important;
+  color: #fff !important;
+  opacity: 0.8;
 }

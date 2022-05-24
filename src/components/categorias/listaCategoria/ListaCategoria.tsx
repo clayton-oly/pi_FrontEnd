@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { Box, Card, CardContent, Button, Typography, Grid, Container, makeStyles } from '@material-ui/core';
+import { Box, Card, CardContent, Button, Typography, Grid, Container, makeStyles, Divider } from '@material-ui/core';
 import Categoria from '../../../models/Categoria';
 import { useNavigate } from 'react-router-dom';
 import { busca } from '../../../services/Service';
@@ -63,9 +63,15 @@ function ListaCategoria() {
       paddingBottom: theme.spacing(8),
     },
     card: {
-      height: '100%',
-      display: 'flex',
-      flexDirection: 'column',
+      height: "100%",
+      display: "flex",
+      flexDirection: "column",
+      color: 'black', 
+      boxShadow: '0 2px 3px 2px rgb(0, 0, 0)',
+      background: 'white',
+      padding: '20px 20px',
+      border: 10,
+      borderRadius: 10,
     },
     cardMedia: {
       paddingTop: '56.25%', // 16:9
@@ -88,7 +94,7 @@ function ListaCategoria() {
 <main>
         {/* Hero unit */}
         <div className={classes.heroContent}>
-          <Container maxWidth="sm">
+          <Container maxWidth="sm" className='container-titulo-botao'>
             <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
               Gêneros
             </Typography>
@@ -101,17 +107,12 @@ function ListaCategoria() {
               <Grid container spacing={2} justifyContent="center">
                 <Grid item>
                 <Link to='/formularioCategoria' className='text-decorator-none'>
-                    <Button variant="contained" color="primary" className='btnComprar'>
+                    <Button variant="contained" color="primary" className='btnRoxo'>
                       Cadastrar novo gênero
                     </Button>
                 </Link>
                   
                 </Grid>
-                {/* <Grid item>
-                  <Button variant="outlined" color="primary">
-                    Secondary action
-                  </Button>
-                </Grid> */}
               </Grid>
             </div>
           </Container>
@@ -127,22 +128,22 @@ function ListaCategoria() {
                     <Typography gutterBottom variant="h5" component="h2">
                       {categoria.genero}
                     </Typography>
+                    <Divider />
                     <Typography>
                     {categoria.descricao}
                     </Typography>
                   </CardContent>
-                  <Box display="flex" justifyContent="center" mb={1.5} >
-
+                  <Box display="flex" mb={1.5} >
                     <Link to={`/formularioCategoria/${categoria.id}`} className="text-decorator-none">
                       <Box mx={1}>
-                        <Button variant="contained" className="marginLeft" size='small' color="primary" >
+                        <Button variant="contained" className="marginLeft btnRoxo" size='small' color="primary" >
                           Atualizar
                         </Button>
                       </Box>
                     </Link>
                     <Link to={`/deletarCategoria/${categoria.id}`} className="text-decorator-none">
                       <Box mx={1}>
-                        <Button variant="contained" size='small' color="secondary">
+                        <Button variant="contained" size='small' className='btnRosa'>
                           Deletar
                         </Button>
                       </Box>

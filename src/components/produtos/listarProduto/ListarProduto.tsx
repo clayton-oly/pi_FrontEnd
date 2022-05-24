@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { Box, Card, CardContent, Button, Typography, makeStyles, Grid, Container } from '@material-ui/core';
+import { Box, Card, CardContent, Button, Typography, makeStyles, Grid, Container, Divider } from '@material-ui/core';
 import Produto from '../../../models/Produto';
 import './ListarProduto.css';
 import { useNavigate } from 'react-router-dom';
@@ -108,7 +108,7 @@ function ListarProduto() {
               <Grid container spacing={2} justifyContent="center">
                 <Grid item>
                   <Link to='/formularioProduto' className='text-decorator-none'>
-                    <Button variant="outlined" color="primary" className='btnComprar'>
+                    <Button variant="outlined" color="primary" className='btnRoxo'>
                       Cadastrar jogo
                     </Button>
                   </Link>
@@ -128,32 +128,40 @@ function ListarProduto() {
                     <Typography gutterBottom variant="h5" component="h2">
                       {produto.nome}
                     </Typography>
+                    <Box className='btnComprar-Preco'>
                     <Typography>
                       R${produto.preco}
                     </Typography>
+                    </Box>
+                    
                   </CardContent>
-                  <Box display="flex" justifyContent="center" mb={1.5} >
+                  <Box className='box-botoes-produto' mb={1.5} >
+                    <Box className='box-botao-comprar'>
                     <Link to={`/cart/${produto.id}`} className="text-decorator-none">
                       <Box mx={1}>
-                        <Button variant="contained" className="btnComprar" size='small' color="primary" >
+                        <Button variant="contained" className="btnAzul" size='small' color="primary" >
                           Comprar
                         </Button>
                       </Box>
                     </Link>
+                    </Box>
+                    <Divider />
+                    <Box className='box-botoes-admin'>
                     <Link to={`/formularioProduto/${produto.id}`} className="text-decorator-none">
                       <Box mx={1}>
-                        <Button variant="contained" className="marginLeft" size='small' color="primary" >
+                        <Button variant="contained" className="marginLeft btnRoxo" size='small' color="primary" >
                           Atualizar
                         </Button>
                       </Box>
                     </Link>
                     <Link to={`/deletarProduto/${produto.id}`} className="text-decorator-none">
                       <Box mx={1}>
-                        <Button variant="contained" size='small' color="secondary">
+                        <Button variant="contained" size='small' className='btnRosa'>
                           Deletar
                         </Button>
                       </Box>
                     </Link>
+                    </Box>
                   </Box>
                 </Card>
               </Grid>

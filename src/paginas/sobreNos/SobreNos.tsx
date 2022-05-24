@@ -1,12 +1,30 @@
 import React from 'react';
-import { Box, Button, Grid, TextField, Typography } from '@material-ui/core'
+import { Box, Button, Grid, Typography } from '@material-ui/core'
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Navbar from '../../components/estaticos/navbar/Navbar';
 import './SobreNos.css';
+import { toast } from 'react-toastify';
 
 function SobreNos() {
+
+    let history = useNavigate()
+
+    function enviarForm() {
+        toast.success('Mensagem enviada !', {
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: false,
+            theme: "colored",
+            progress: undefined,
+        });
+        history("/home")
+    }
+
     return (
         <>
             <Navbar />
@@ -32,66 +50,66 @@ function SobreNos() {
                 </Grid>
 
                 <Grid className="container-devs">
-                <div className='tituloIntegrantes'>
-                         <h2>Integrantes</h2>
+                    <div className='tituloIntegrantes'>
+                        <h2>Integrantes</h2>
                     </div>
                     <Box className='fotosIntegrantes1'>
                         <div className='links-devs'>
                             <Box className="alef"> </Box>
                             <Typography className='nomes'><h3>Alef Oliveira</h3></Typography>
                             <Box className='redes'>
-                                    <a href= "https://github.com/AlefSilvaa?tab=overview&from=2022-02-01&to=2022-02-22" target="_blank" rel="noopener noreferrer">
-                                        <GitHubIcon className='redes1' />
-                                    </a>
-                            
-                                    <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
-                                        <LinkedInIcon className='redes2' />
-                                    </a>
-                                </Box>
-                            
+                                <a href="https://github.com/AlefSilvaa?tab=overview&from=2022-02-01&to=2022-02-22" target="_blank" rel="noopener noreferrer">
+                                    <GitHubIcon className='redes1' />
+                                </a>
+
+                                <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+                                    <LinkedInIcon className='redes2' />
+                                </a>
+                            </Box>
+
                         </div>
                         <div className='links-devs'>
                             <Box className="alexandre">
                             </Box>
                             <Typography className='nomes'><h3>Alexandre Lima</h3></Typography>
                             <Box className='redes'>
-                                    <a href= "https://github.com/AlexandrePauloLima" target="_blank" rel="noopener noreferrer">
-                                        <GitHubIcon className='redes1' />
-                                    </a>
-                            
-                                    <a href="https://www.linkedin.com/in/alexandre-paulo-de-lima-193321129/" target="_blank" rel="noopener noreferrer">
-                                        <LinkedInIcon className='redes2' />
-                                    </a>
-                                </Box>
+                                <a href="https://github.com/AlexandrePauloLima" target="_blank" rel="noopener noreferrer">
+                                    <GitHubIcon className='redes1' />
+                                </a>
+
+                                <a href="https://www.linkedin.com/in/alexandre-paulo-de-lima-193321129/" target="_blank" rel="noopener noreferrer">
+                                    <LinkedInIcon className='redes2' />
+                                </a>
+                            </Box>
                         </div>
                         <div className='links-devs'>
                             <Box className="beatriz">
                             </Box>
                             <Typography className='nomes'><h3>Beatriz Locatelli</h3></Typography>
                             <Box className='redes'>
-                                    <a href= "https://github.com/bialocatelli" target="_blank" rel="noopener noreferrer">
-                                        <GitHubIcon className='redes1' />
-                                    </a>
-                            
-                                    <a href="https://www.linkedin.com/in/beatriz-gon%C3%A7alves-locatelli-b01759209/" target="_blank" rel="noopener noreferrer">
-                                        <LinkedInIcon className='redes2'  />
-                                    </a>
-                                </Box>
-                                
+                                <a href="https://github.com/bialocatelli" target="_blank" rel="noopener noreferrer">
+                                    <GitHubIcon className='redes1' />
+                                </a>
+
+                                <a href="https://www.linkedin.com/in/beatriz-gon%C3%A7alves-locatelli-b01759209/" target="_blank" rel="noopener noreferrer">
+                                    <LinkedInIcon className='redes2' />
+                                </a>
+                            </Box>
+
                         </div>
                         <div className='links-devs'>
                             <Box className="clayton">
                             </Box>
                             <Typography className='nomes'><h3>Clayton Rocha</h3></Typography>
                             <Box className='redes' >
-                                    <a href= "https://github.com/clayton-oly" target="_blank" rel="noopener noreferrer">
-                                        <GitHubIcon className='redes1'  />
-                                    </a>
-                            
-                                    <a href="https://www.linkedin.com/in/clayton-oly/" target="_blank" rel="noopener noreferrer">
-                                        <LinkedInIcon className='redes2'  />
-                                    </a>
-                                </Box>
+                                <a href="https://github.com/clayton-oly" target="_blank" rel="noopener noreferrer">
+                                    <GitHubIcon className='redes1' />
+                                </a>
+
+                                <a href="https://www.linkedin.com/in/clayton-oly/" target="_blank" rel="noopener noreferrer">
+                                    <LinkedInIcon className='redes2' />
+                                </a>
+                            </Box>
                         </div>
                     </Box>
                     <Box className='fotosIntegrantes2'>
@@ -100,45 +118,45 @@ function SobreNos() {
                             </Box>
                             <Typography className='nomes'><h3>Jessica Santos</h3></Typography>
                             <Box className='redes'>
-                                    <a href= "https://github.com/jeskamoraes" target="_blank" rel="noopener noreferrer">
-                                        <GitHubIcon className='redes1'/>
-                                    </a>
-                            
-                                    <a href="https://www.linkedin.com/in/jessicamoraessantos/" target="_blank" rel="noopener noreferrer">
-                                        <LinkedInIcon className='redes2' />
-                                    </a>
-                                </Box>
+                                <a href="https://github.com/jeskamoraes" target="_blank" rel="noopener noreferrer">
+                                    <GitHubIcon className='redes1' />
+                                </a>
+
+                                <a href="https://www.linkedin.com/in/jessicamoraessantos/" target="_blank" rel="noopener noreferrer">
+                                    <LinkedInIcon className='redes2' />
+                                </a>
+                            </Box>
                         </div>
                         <div className='links-devs'>
                             <Box className="victor">
                             </Box>
                             <Typography className='nomes'><h3>Victor Silva</h3></Typography>
                             <Box className='redes' >
-                                    <a href= "https://github.com/vxtxbryan" target="_blank" rel="noopener noreferrer">
-                                        <GitHubIcon className='redes1'  />
-                                    </a>
-                            
-                                    <a href="https://www.linkedin.com/in/victor-oliveira-275836231/" target="_blank" rel="noopener noreferrer">
-                                        <LinkedInIcon className='redes2'  />
-                                    </a>
-                                </Box>
+                                <a href="https://github.com/vxtxbryan" target="_blank" rel="noopener noreferrer">
+                                    <GitHubIcon className='redes1' />
+                                </a>
+
+                                <a href="https://www.linkedin.com/in/victor-oliveira-275836231/" target="_blank" rel="noopener noreferrer">
+                                    <LinkedInIcon className='redes2' />
+                                </a>
+                            </Box>
                         </div>
                         <div className='links-devs'>
                             <Box className="viviane">
                             </Box>
                             <Typography className='nomes'><h3>Viviane Rêgo</h3></Typography>
                             <Box className='redes' >
-                                    <a href= "https://github.com/Viviane110199" target="_blank" rel="noopener noreferrer">
-                                        <GitHubIcon className='redes1' />
-                                    </a>
-                            
-                                    <a href="https://www.linkedin.com/in/viviane-da-rocha-rego/" target="_blank" rel="noopener noreferrer">
-                                        <LinkedInIcon className='redes2' />
-                                    </a>
-                                </Box>
+                                <a href="https://github.com/Viviane110199" target="_blank" rel="noopener noreferrer">
+                                    <GitHubIcon className='redes1' />
+                                </a>
+
+                                <a href="https://www.linkedin.com/in/viviane-da-rocha-rego/" target="_blank" rel="noopener noreferrer">
+                                    <LinkedInIcon className='redes2' />
+                                </a>
+                            </Box>
                         </div>
                     </Box>
-                    
+
                 </Grid>
 
                 <Grid className="grid-form-sobre">
@@ -161,9 +179,8 @@ function SobreNos() {
                         </Box>
 
                         <Box marginTop={2} textAlign='center'>
-                            <Link className='text-decorator-none' to='/login'>
-                                <Button className='botao' type="submit" variant="contained" color="primary">
-                               
+                            <Link className='text-decorator-none' to='/home'>
+                                <Button onClick={enviarForm} className='botao' type="submit" variant="contained" color="primary">
                                     Enviar
                                 </Button>
                             </Link>

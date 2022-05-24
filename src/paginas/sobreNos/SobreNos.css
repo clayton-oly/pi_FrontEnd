@@ -11,15 +11,12 @@
     flex-direction: column;
     width: 100vw;
     min-height: 100vh;
-    /* justify-content: center;
-    align-items: center !important; */
 }
 
 .container-sobre-one {
     display: flex;
     height: 100vh;
-    width: 100%;
-    /* text-align: center; */
+    width: 100vw;
     background-color: #fff;
 }
 
@@ -59,10 +56,9 @@
     background-image: url(./assets/jogos-e-competicoes-para-equipe-de-vendas.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    width: 100%;
-    *position: relative;
+    width: 100vw;
+    position: relative;
     display: inline-block;
-    /* opacity: 0.5; */
     z-index: 1;
 }
 
@@ -239,13 +235,6 @@
     
 }
 
-/* .container-left-box-sobre-form {
-    background-image: url(./assets/contato.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 50%;
-} */
-
 .container-left-box-sobre-form img {
     height: 100px;
 }
@@ -292,14 +281,3 @@
     font-family: 'Righteous', sans-serif;
     font-size: 20px;
 }
-
-/* .texto {
-    font-family: 'Barlow Semi Condensed', sans-serif !important;
-    text-align: center;
-    padding: 50px;
-    font-size: 30px !important;
-}
-
-.textos2 {
-    font-family: 'Teko', sans-serif !important;
-} */

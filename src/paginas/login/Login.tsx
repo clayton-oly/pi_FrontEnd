@@ -49,7 +49,7 @@ function Login() {
     function updatedModel(e: ChangeEvent<HTMLInputElement>) {
         setUserLogin({
             ...userLogin,
-            [e.target.name]: e.target.value           
+            [e.target.name]: e.target.value
         })
     }
 
@@ -57,8 +57,8 @@ function Login() {
         if (respUserLogin.token !== "") {
 
             // Verifica os dados pelo console (Opcional)
-           // console.log("Token: " + respUserLogin.token)
-           // console.log("ID: " + respUserLogin.id)
+            // console.log("Token: " + respUserLogin.token)
+            // console.log("ID: " + respUserLogin.id)
 
             // Guarda as informações dentro do Redux (Store)
             dispatch(addToken(respUserLogin.token))
@@ -103,9 +103,9 @@ function Login() {
                 <Box className='wrap-login'>
                     <form onSubmit={logar} className='login-form'>
                         <span className='login-form-title'>Bem Vindo!</span>
-                            <img src={console} alt='NSG' className='img_logo'/>
+                        <img src={console} alt='NSG' className='img_logo' />
                         <span className='login-form-title'>
-                          
+
                         </span>
 
                         <Box className='wrap-input'>
@@ -137,12 +137,17 @@ function Login() {
                         <Box className="text-center">
                             <span className="txt1">Nao possui conta?</span>
 
-                            <Link to='/cadastro'>
+                            <Link to='/cadastro' className='text-decorator-none'>
                                 <Typography variant='subtitle1' gutterBottom align='center' className='txt2'>Cadastre-se</Typography>
                             </Link>
                         </Box>
 
                     </form>
+                    <Link to='/home' className='text-decorator-none'>
+                        <Box className='link-home'>
+                            <Typography className='text-link-home'>Voltar para página inicial</Typography>
+                        </Box>
+                    </Link>
                 </Box>
             </Box>
 
