@@ -3,10 +3,10 @@ import { Box, Button, Card, CardActions, CardContent, Typography } from '@materi
 import { useNavigate, useParams } from 'react-router-dom';
 import { buscaId, deleteId } from '../../../services/Service';
 import Categoria from '../../../models/Categoria';
-import "./DeletarCategoria.css";
 import { useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
 import { UserState } from '../../../store/tokens/userReducer';
+import "./DeletarCategoria.css";
 
 function DeletarCategoria() {
     let history = useNavigate();
@@ -58,7 +58,7 @@ function DeletarCategoria() {
                 }
             });
             
-            toast.success('Categoria deletada com sucesso!', {
+            toast.success('Gênero deletado com sucesso!', {
                 position: "top-right",
                 autoClose: 2000,
                 hideProgressBar: false,
@@ -95,7 +95,7 @@ function DeletarCategoria() {
                     <CardContent>
                         <Box justifyContent="center">
                             <Typography gutterBottom className='text-deletar'>
-                                Deseja deletar a Categoria:
+                                Deseja deletar o Gênero:
                             </Typography>
                             <Typography className='text-deletar'>
                                 { categoria?.genero }
