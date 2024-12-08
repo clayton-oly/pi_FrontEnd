@@ -1,0 +1,102 @@
+import React from 'react';
+import { AppBar, Toolbar, Typography, Box } from '@material-ui/core';
+import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom'
+import './Navbar.css'
+import { useSelector } from 'react-redux';
+import { useDispatch } from "react-redux";
+import { addToken } from '../../../store/tokens/action';
+import { toast } from 'react-toastify';
+import { UserState } from '../../../store/tokens/userReducer';
+import PersonIcon from '@mui/icons-material/Person';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+
+function Navbar() {
+    const token = useSelector<UserState, UserState["tokens"]>(
+        (state) => state.tokens
+    );
+
+    let navigate = useNavigate();
+    const dispatch = useDispatch();
+
+    function goLogout() {
+        dispatch(addToken(''));
+        toast.info('Usuário deslogado', {
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: false,
+            theme: "colored",
+            progress: undefined,
+        });
+        navigate('/login');
+    }
+
+    return (
+        <AppBar className='menu-container'>
+            <Toolbar variant="dense" className='menu-toolbar'>
+                {/* Logo */}
+                <Link to="/home" className="text-decorator-none">
+                    <Box className='cursor'>
+                        <Typography variant="h5" color="inherit" className='menu-logo'>
+                            NSG
+                        </Typography>
+                    </Box>
+                </Link>
+
+                {/* Menus fixos */}
+                <Box display="flex" justifyContent="start">
+                    <Link to="/produtos" className="text-decorator-none">
+                        <Box mx={1} className='cursor'>
+                            <Typography variant="h6" color="inherit" className='menu-text'>
+                                Jogos
+                            </Typography>
+                        </Box>
+                    </Link>
+                    <Link to="/categorias" className="text-decorator-none">
+                        <Box mx={1} className='cursor'>
+                            <Typography variant="h6" color="inherit" className='menu-text'>
+                                Gêneros
+                            </Typography>
+                        </Box>
+                    </Link>
+                    <Link to="/sobrenos" className="text-decorator-none">
+                        <Box mx={1} className='cursor'>
+                            <Typography variant="h6" color="inherit" className='menu-text'>
+                                Quem Somos
+                            </Typography>
+                        </Box>
+                    </Link>
+                </Box>
+
+                {/* Ícones para usuários logados e deslogados */}
+                <Box className='nav-menu-icon'>
+                    {token ? (
+                        <>
+                            <Link to="/cart">
+                                <Box className='menu-icon-cursor'>
+                                    <ShoppingCartIcon className='nav-icon' />
+                                </Box>
+                            </Link>
+                            <Box className='menu-icon-cursor' onClick={goLogout}>
+                                <PersonIcon className='nav-icon' />
+                            </Box>
+                        </>
+                    ) : (
+                        <Link to="/login">
+                            <Box mx={1} className='cursor'>
+                                <Typography variant="h6" color="inherit" className='menu-text'>
+                                    Entre
+                                </Typography>
+                            </Box>
+                        </Link>
+                    )}
+                </Box>
+            </Toolbar>
+        </AppBar>
+    );
+}
+
+export default Navbar;

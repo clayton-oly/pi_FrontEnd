@@ -1,0 +1,131 @@
+/* Resetando margin e padding para todos os elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Container principal, onde o Banner e os outros itens ficam */
+.container-home {
+    margin-top: 0; /* Sem margem extra no topo */
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    flex-direction: column; /* Garante que os itens fiquem empilhados corretamente */
+}
+
+/* Container do Banner */
+#items-wrapper {
+    width: 100%;
+    min-height: 80vh; /* Garante que o banner tenha uma altura mínima de 80vh */
+    height: auto; /* Permite que o banner ajuste sua altura conforme o conteúdo */
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Estilo para os itens dentro do banner */
+#items {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%; /* Garante que a altura do container se ajuste ao banner */
+}
+
+/* Cada item do Banner */
+.item {
+    flex: none;
+    width: 100%;
+    height: auto; /* Ajusta a altura de cada item de forma flexível */
+    position: relative;
+}
+
+/* Estilo para as legendas do Banner */
+.item figcaption {
+    position: absolute;
+    bottom: 20px;
+    left: 20px; /* Ajustei o posicionamento para ser mais flexível */
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo semitransparente */
+    border-radius: 12px;
+    padding: 15px;
+    color: #fff;
+    max-width: 90%; /* Garante que o texto não ultrapasse os limites da tela */
+    z-index: 10; /* Garantir que o texto fique acima da imagem */
+}
+
+/* Estilo para o título dentro da legenda */
+.item figcaption h2 {
+    font-family: 'Righteous', sans-serif;
+    font-size: 36px;
+    margin-bottom: 10px; /* Espaço entre o título e o texto */
+}
+
+/* Estilo para o texto dentro da legenda */
+.item figcaption p {
+    text-align: justify;
+    opacity: 0.8;
+    font-size: 16px; /* Ajuste no tamanho da fonte */
+}
+
+/* Estilo da imagem do banner */
+.imagem_banner {
+    width: 100%;
+    height: 100%; /* A imagem ocupa toda a altura e largura */
+    object-fit: cover; /* Cobre a área sem deformar */
+    display: block; /* Remove o espaço em branco ao redor */
+    z-index: 1; /* Garante que a imagem fique atrás do texto */
+}
+
+/* Garantir que o carrossel não seja afetado */
+.carousel-container {
+    margin-top: 0; /* Evita espaços extras no topo */
+    padding-top: 20px; /* Adiciona um pequeno espaço para o carrossel */
+    width: 100%;
+}
+
+/* Ajuste no layout do carrossel para evitar problemas de sobreposição */
+.carousel-inner {
+    width: 100%;
+    height: auto;
+    margin-top: 10px; /* Ajuste fino para o carrossel */
+}
+
+/* Garantir que o título e descrição apareçam corretamente em diferentes tamanhos de tela */
+@media (min-width: 768px) {
+    #items-wrapper {
+        min-height: 60vh; /* Ajuste para a altura mínima do banner em telas maiores */
+    }
+
+    .item figcaption {
+        bottom: 40px; /* Ajuste para o desktop */
+        left: 40px;  /* Maior distância das bordas no desktop */
+        max-width: 60%; /* Garante que o texto ocupe menos largura em telas maiores */
+    }
+
+    .item figcaption h2 {
+        font-size: 48px; /* Aumenta o tamanho do título em telas maiores */
+    }
+
+    .item figcaption p {
+        font-size: 18px; /* Aumenta o tamanho do texto em telas maiores */
+    }
+}
+
+/* Scrollbar personalizada */
+*::-webkit-scrollbar {
+    width: 12px;
+    height: 8px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #fff;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: rgb(196, 193, 193);
+    border-radius: 20px;
+}

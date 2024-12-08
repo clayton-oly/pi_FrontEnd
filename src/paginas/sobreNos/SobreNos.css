@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container-sobre {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    min-height: 100vh;
+}
+
+.container-sobre-one {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    background-color: #fff;
+}
+
+.texto-sobre {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    gap: 20px;
+    position: absolute;
+    margin: 100px;
+    z-index: 3;
+    color: #fff;
+    padding: 18px;
+    height: 60%;
+}
+
+.texto-sobre h1 {
+    font-family: 'Righteous', sans-serif;
+    font-weight: 400;
+    font-size: 50px;
+    text-transform: uppercase;
+    text-align: right;
+    color: white !important; text-shadow: black 0.3em 0.3em 0.3em;
+}
+
+.texto-sobre p {
+    font-family: 'Righteous', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-align: justify;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px 22px;
+    
+}
+
+.background-sobre {
+    background-image: url(./assets/jogos-e-competicoes-para-equipe-de-vendas.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+}
+
+.container-devs {
+    height: 100vh;
+    width: 100vw;
+    background: -webkit-linear-gradient(to right,#532cad,#8a4dc4);
+    background: -o-linear-gradient(to right, #532cad, #8a4dc4);
+    background: -moz-linear-gradient(to right,#532cad, #8a4dc4);
+    background: linear-gradient(to right,#532cad,#8a4dc4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+       
+}
+
+.tituloIntegrantes {
+    font-family: 'Righteous', sans-serif;
+    font-size: 35px;
+    text-transform: uppercase;
+    color: white !important; text-shadow: black 0.3em 0.3em 0.3em;
+    margin-top: 12%;
+    text-align: center;
+}
+
+.nomes {
+    font-family: 'Righteous', sans-serif;
+    display: flex;
+    flex-direction: row !important;
+    justify-content: center;
+    color: white !important; text-shadow: black 0.3em 0.3em 0.3em;
+
+}
+
+.links-devs {
+    font-family: 'Righteous', sans-serif;
+    justify-content: center;
+    text-align: center;
+
+}
+
+.fotosIntegrantes1 {
+    display: flex;
+    flex-direction: row !important;
+    justify-content: center;
+    align-items: left;
+    margin-top: 2%;
+}
+
+.fotosIntegrantes2 {
+    display: flex;
+    flex-direction: row !important;
+    justify-content: center;
+    align-items: left;
+    padding-bottom: 2%;
+}
+
+.alef {
+    background-image: url(./assets/Alef.jpeg);
+    width: 30vh;
+    height: 30vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 80px;
+    margin: 20px;
+    box-shadow: 5px 5px 5px black;
+    
+}
+
+.victor {
+    background-image: url(./assets/Victor.jpeg);
+    width: 30vh;
+    height: 30vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 80px;
+    margin: 20px;
+    box-shadow: 5px 5px 5px black;
+    
+}
+
+.viviane {
+    background-image: url(./assets/Viviane.jpeg);
+    width: 30vh;
+    height: 30vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 80px;
+    margin: 20px;
+    box-shadow: 5px 5px 5px black;
+}
+
+.alexandre {
+    background-image: url(./assets/Alexandre.jpeg);
+    width: 30vh;
+    height: 30vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 80px;
+    margin: 20px;
+    box-shadow: 5px 5px 5px black;
+
+}
+
+.beatriz {
+    background-image: url(./assets/Beatriz.jpeg);
+    width: 30vh;
+    height: 30vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 80px;
+    margin: 20px;
+    box-shadow: 5px 5px 5px black;
+
+}
+
+.clayton {
+    background-image: url(./assets/Clayton.jpeg);
+    width: 30vh;
+    height: 30vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 80px;
+    margin: 20px;
+    box-shadow: 5px 5px 5px black;
+    
+}
+
+.jessica { 
+    background-image: url(./assets/Jessica.jpeg);
+    width: 30vh;
+    height: 30vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 80px;
+    margin: 20px;
+    box-shadow: 5px 5px 5px black;
+    
+}
+
+.redes1 {
+    align-items:center;
+    justify-content: center;
+    display: flex;
+    font-size: 50px !important;
+    color: white !important; 
+    border-radius: 80px;
+    box-shadow: 5px 5px 5px black;
+}
+
+.redes2 {
+    align-items:center;
+    justify-content: center;
+    display: flex;
+    font-size: 50px !important;
+    color: white !important; 
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px black;
+}
+    
+
+.grid-form-sobre {
+    background: -webkit-linear-gradient(to right,#532cad,#8a4dc4);
+    background: -o-linear-gradient(to right, #532cad, #8a4dc4);
+    background: -moz-linear-gradient(to right,#532cad, #8a4dc4);
+    background: linear-gradient(to right,#532cad,#8a4dc4);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    width: 100vw;
+    
+}
+
+.container-left-box-sobre-form img {
+    height: 100px;
+}
+
+.container-rigth-box-sobre-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 50%;
+    height: 60%;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    margin-top: 10%;
+}
+
+.box-sobre-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.box-sobre-form form input {
+    width: 500px;
+    height: 45px;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    border-radius: 6px;
+    padding: 8px;
+    font-family: 'Righteous', sans-serif;
+}
+
+.botao {
+    font-family: 'Righteous', sans-serif!important;
+    background-color: rgb(223, 19, 104) !important;
+    box-shadow: 5px 5px 5px black;
+}
+
+.text-decorator-none {
+    text-decoration: none !important;
+}
+
+.box-sobre-form-titulo {
+    color: white !important; text-shadow: black 0.3em 0.3em 0.3em;
+    font-family: 'Righteous', sans-serif;
+    font-size: 20px;
+}

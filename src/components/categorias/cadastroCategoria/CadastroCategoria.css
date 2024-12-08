@@ -1,0 +1,23 @@
+.container-cad-categoria {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.container-cad-categoria-form {
+    width: 80vw;
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.box-cad-categoria-text {
+    display: flex;
+    align-items: center;
+}
+
+.box-cad-categoria-form .btnFinalizar {
+    background-color: rgb(223, 19, 104);
+}
