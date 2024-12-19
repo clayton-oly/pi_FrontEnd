@@ -12,11 +12,19 @@ import PersonIcon from '@mui/icons-material/Person';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 function Navbar() {
+<<<<<<< HEAD
+=======
+
+>>>>>>> adbc6c9620344807f70f068363aeab827e892809
     const token = useSelector<UserState, UserState["tokens"]>(
         (state) => state.tokens
     );
 
     let navigate = useNavigate();
+<<<<<<< HEAD
+=======
+
+>>>>>>> adbc6c9620344807f70f068363aeab827e892809
     const dispatch = useDispatch();
 
     function goLogout() {
@@ -31,6 +39,7 @@ function Navbar() {
             theme: "colored",
             progress: undefined,
         });
+<<<<<<< HEAD
         navigate('/login');
     }
 
@@ -97,6 +106,83 @@ function Navbar() {
             </Toolbar>
         </AppBar>
     );
+=======
+        navigate('/login')
+    }
+
+    var navbarComponent;
+
+    if (token !== "") {
+        navbarComponent =
+            <AppBar className='menu-container'>
+                <Toolbar variant="dense" className='menu-toolbar'>
+                    <Link to="/home" className="text-decorator-none">
+                        <Box className='cursor'>
+                            <Typography variant="h5" color="inherit" className='menu-logo'>
+                                NSG
+                            </Typography>
+                        </Box>
+                    </Link>
+
+                    <Box display="flex" justifyContent="start">
+
+                        <Link to="/produtos" className="text-decorator-none">
+                            <Box mx={1} className='cursor'>
+                                <Typography variant="h6" color="inherit" className='menu-text'>
+                                    Jogos
+                                </Typography>
+                            </Box>
+                        </Link>
+                        <Link to="/categorias" className="text-decorator-none">
+                            <Box mx={1} className='cursor'>
+                                <Typography variant="h6" color="inherit" className='menu-text'>
+                                    Gêneros
+                                </Typography>
+                            </Box>
+                        </Link>
+                        {/* <Link to="/formularioCategoria" className="text-decorator-none">
+                            <Box mx={1} className='cursor'>
+                                <Typography variant="h6" color="inherit" className='menu-text'>
+                                    Cadastrar gênero
+                                </Typography>
+                            </Box>
+                        </Link> */}
+                        {/* <Link to="/formularioProduto" className="text-decorator-none">
+                            <Box mx={1} className='cursor'>
+                                <Typography variant="h6" color="inherit" className='menu-text'>
+                                    Cadastrar produto
+                                </Typography>
+                            </Box>
+                        </Link> */}
+                        <Link to="/sobrenos" className="text-decorator-none">
+                            <Box mx={1} className='cursor'>
+                                <Typography variant="h6" color="inherit" className='menu-text'>
+                                    Quem Somos
+                                </Typography>
+                            </Box>
+                        </Link>
+                    </Box>
+
+                    <Box className='nav-menu-icon'>
+                        <Link to='/cart'>
+                            <Box className='menu-icon-cursor' >
+                                <ShoppingCartIcon className='nav-icon' />
+                            </Box>
+                        </Link>
+                        <Link to="/" rel="noopener noreferrer" onClick={goLogout}>
+                            <PersonIcon className='nav-icon' />
+                        </Link>
+                    </Box>
+
+                </Toolbar>
+            </AppBar>
+    }
+    return (
+        <>
+            {navbarComponent}
+        </>
+    )
+>>>>>>> adbc6c9620344807f70f068363aeab827e892809
 }
 
 export default Navbar;

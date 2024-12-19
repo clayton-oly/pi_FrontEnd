@@ -1,8 +1,13 @@
+<<<<<<< HEAD
+=======
+import React from 'react';
+>>>>>>> adbc6c9620344807f70f068363aeab827e892809
 import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import { Typography, Box, Grid, Link } from '@material-ui/core';
 import './Footer.css'
+<<<<<<< HEAD
 
 function Footer() {
 
@@ -10,6 +15,24 @@ function Footer() {
 
     footerComponent =
         <Grid container direction="row" justifyContent="center" alignItems="center">
+=======
+import { useSelector } from 'react-redux';
+import { UserState } from '../../../store/tokens/userReducer';
+
+
+
+function Footer() {
+
+    const token = useSelector<UserState, UserState["tokens"]>(
+        (state) => state.tokens
+    );
+
+    var footerComponent;
+
+    if (token !== "") {
+        footerComponent =
+            <Grid container direction="row" justifyContent="center" alignItems="center">
+>>>>>>> adbc6c9620344807f70f068363aeab827e892809
                 <Grid alignItems="center" item xs={12}>
                     <Box className='footer-infos'>
                         <Box paddingTop={1} className='footer-infos-links'>
@@ -49,7 +72,12 @@ function Footer() {
                     </Box>
 
                 </Grid>
+<<<<<<< HEAD
         </Grid>
+=======
+            </Grid>
+    }
+>>>>>>> adbc6c9620344807f70f068363aeab827e892809
 
     return (
         <>

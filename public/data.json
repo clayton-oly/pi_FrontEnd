@@ -1,0 +1,59 @@
+[
+  {
+    "id": 1,
+    "nome": "Console XYZ",
+    "descricao": "Um console de última geração com gráficos incríveis.",
+    "preco": 2999.99,
+    "tipo": "Eletrônicos",
+    "classInd": "Livre",
+    "console": "PlayStation",
+    "foto": "https://example.com/imagens/console_xyz.jpg",
+    "dataProduto": "2024-12-19",
+    "categoria": {
+      "id": 101,
+      "nome": "Jogos e Consoles",
+      "descricao": "Categoria voltada para produtos relacionados a jogos."
+    },
+    "usuario": {
+      "id": 501,
+      "nome": "João Silva",
+      "email": "joao.silva@example.com",
+      "perfil": "Administrador"
+    }
+  },
+  {
+    "id": 2,
+    "nome": "Jogo ABC",
+    "descricao": "Um jogo emocionante cheio de aventuras.",
+    "preco": 199.99,
+    "tipo": "Jogos",
+    "classInd": "12+",
+    "console": "Xbox",
+    "foto": "https://example.com/imagens/jogo_abc.jpg",
+    "dataProduto": "2024-12-18",
+    "categoria": {
+      "id": 102,
+      "nome": "Jogos Aventura",
+      "descricao": "Categoria de jogos focados em aventura e ação."
+    },
+    "usuario": {
+      "id": 502,
+      "nome": "Maria Souza",
+      "email": "maria.souza@example.com",
+      "perfil": "Usuário"
+    }
+  },
+  {
+    "id": 3,
+    "nome": "Controle XYZ",
+    "descricao": "Controle sem fio para o console XYZ.",
+    "preco": 249.99,
+    "tipo": "Acessórios",
+    "classInd": "Livre",
+    "console": "PlayStation",
+    "foto": "https://example.com/imagens/controle_xyz.jpg",
+    "dataProduto": "2024-12-17",
+    "categoria": null,
+    "usuario": null
+  }
+]
